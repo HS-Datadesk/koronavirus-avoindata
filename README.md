@@ -22,7 +22,8 @@ eikä poisteta tai muuteta kenttien nimiä). Esimerkkidataa myös [täällä](la
     {
       id: <numeerinen id, juokseva numerointi>,
       date: <havainnon aika ISO 8601 -formaatissa>,
-      healthCareDistrict: <sairaanhoitopiiri>
+      healthCareDistrict: <sairaanhoitopiiri>,
+      infectionSource: <tartunnan lähteen id (eli tästä listasta), "unkwown" jos ei tiedetä ja "related to earlier" jos tarkkaa lähdettä ei tiedetä mutta tiedetään että liittyy johonkin aiempaan tapaukseen>
     },
     .
     .
@@ -36,6 +37,8 @@ eikä poisteta tai muuteta kenttien nimiä). Esimerkkidataa myös [täällä](la
 
 Sairaanhoitopiirien nimet kuten [täällä](https://www.kuntaliitto.fi/sosiaali-ja-terveysasiat/sairaanhoitopiirien-jasenkunnat), sillä erotuksella
 että Helsingin ja Uudenmaan sairaanhoitopiiri on esitetty muodossa HUS.
+
+`infectionSource` -kenttää voidaan käyttää tartuntaketjujen havainnollistamiseen.
 
 # Dataa on käytetty täällä
 
@@ -69,7 +72,8 @@ and field names should remain the same and fields shouldn't be removed for examp
     {
       id: <numeric, sequential id>,
       date: <date when this observation was made, ISO 8601 -format>,
-      healthCareDistrict: <health care district>
+      healthCareDistrict: <health care district>,
+      infectionSource: <id of the infection source (from this array), "unkwown" if unknown and "related to earlier" if we cannot pinpoint the exact source but know it's from known exposure>
     },
     .
     .
@@ -83,6 +87,8 @@ and field names should remain the same and fields shouldn't be removed for examp
 
 The health care distrticts follow naming conventions from [here](https://www.kuntaliitto.fi/sosiaali-ja-terveysasiat/sairaanhoitopiirien-jasenkunnat), with the
 difference that the health care district of Helsinki and Uusimaa is called HUS.
+
+`infectionSource` field can be used to inspect infection chains.
 
 # Lisenssi: MIT-lisenssi
 
