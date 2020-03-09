@@ -23,14 +23,22 @@ eikä poisteta tai muuteta kenttien nimiä). Esimerkkidataa myös [täällä](la
       id: <numeerinen id, juokseva numerointi>,
       date: <havainnon aika ISO 8601 -formaatissa>,
       healthCareDistrict: <sairaanhoitopiiri>,
-      infectionSource: <tartunnan lähteen id (eli tästä listasta), "unkwown" jos ei tiedetä ja "related to earlier" jos tarkkaa lähdettä ei tiedetä mutta tiedetään että liittyy johonkin aiempaan tapaukseen>
+      infectionSource: <tartunnan lähteen id (eli tästä listasta), "unkwown" jos ei tiedetä ja "related to earlier" jos tarkkaa lähdettä ei tiedetä mutta tiedetään että liittyy johonkin aiempaan tapaukseen>,
+      infectionSourceCountry: <jos tiedossa, infection lähdemaa ISO 3166-1 alpha-3 -formaatissa>
     },
     .
     .
     .
   ],
   deaths: [
-    <samanmuotoisia objekteja kuin yllä>
+    {
+      id: <numeerinen id, juokseva numerointi>,
+      date: <havainnon aika ISO 8601 -formaatissa>,
+      healthCareDistrict: <sairaanhoitopiiri>,
+    },
+    .
+    .
+    .
   ]
 }
 ```
@@ -73,14 +81,22 @@ and field names should remain the same and fields shouldn't be removed for examp
       id: <numeric, sequential id>,
       date: <date when this observation was made, ISO 8601 -format>,
       healthCareDistrict: <health care district>,
-      infectionSource: <id of the infection source (from this array), "unkwown" if unknown and "related to earlier" if we cannot pinpoint the exact source but know it's from known exposure>
+      infectionSource: <id of the infection source (from this array), "unkwown" if unknown and "related to earlier" if we cannot pinpoint the exact source but know it's from known exposure>,
+      infectionSourceCountry: <if known, infection source country in ISO 3166-1 alpha-3 format>
     },
     .
     .
     .
   ],
   deaths: [
-    <samanmuotoisia objekteja kuin yllä>
+    {
+      id: <numeric, sequential id>,
+      date: <date when this observation was made, ISO 8601 -format>,
+      healthCareDistrict: <health care district>,
+    },
+    .
+    .
+    .
   ]
 }
 ```
