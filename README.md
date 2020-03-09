@@ -3,6 +3,36 @@
 HS julkaisee Suomen koronavirus-tartunnat avoimena datana. K
 
 
+# Suora rajapinta HS:n dataan (see in English below)
+
+Viimeisimmän HS:n datan voi lukea osoitteesta https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData
+(kyllä, se on suora osoite AWS Lambdan API-gatewayhyn). `GET`-pyynnöllä pääsee.
+
+## Datan formaatti
+
+Rajapinta palauttaa JSONia, joka näyttää tältä (formaatti voi vaihtua, mutta pyritään seuraamaan hyviä API-suunnittelun periaatteita
+eikä poisteta tai muuteta kenttien nimiä).
+
+```
+{
+  confirmed: [
+    {
+      id: <numeerinen id, juokseva numerointi>,
+      date: <havainnon aika ISO 8601 -formaatissa>,
+      healthCareDistrict: <sairaanhoitopiiri>
+    },
+    .
+    .
+    .
+  ],
+  deaths: [
+    <samanmuotoisia objekteja kuin yllä>
+  ]
+}
+```
+
+Sairaanhoitopiirien nimet kuten [täällä](https://www.kuntaliitto.fi/sosiaali-ja-terveysasiat/sairaanhoitopiirien-jasenkunnat), sillä erotuksella
+että Helsingin ja Uudenmaan sairaanhoitopiiri on esitetty muodossa HUS.
 
 # Dataa on käytetty täällä
 
@@ -10,7 +40,39 @@ HS julkaisee Suomen koronavirus-tartunnat avoimena datana. K
 
 # Huomautus
 
-Tämä data on peräisin julkisista lähteistä. HS pyrkii kasaamaan sen mahdollisimman paikkansa pitävänä. Emme takaa, että päivitämme dataa jatkuvasti ja saatamme lopettaa datan päivittämisen ennalta ilmoittamatta. 
+Tämä data on peräisin julkisista lähteistä. HS pyrkii kasaamaan sen mahdollisimman paikkansa pitävänä. Emme takaa, että päivitämme dataa jatkuvasti ja saatamme lopettaa datan päivittämisen ennalta ilmoittamatta.
+
+
+# Direct interface to HS data
+
+The latest data used by HS can be read from https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData
+(yes, a direct adress to a AWS Lambda API gateway). `GET` request works.
+
+## Data format
+
+The API returns JSON, whixh is structured as follows (the format may change, but good API development practices will be considered
+and field names should remain the same and fields shouldn't be removed for example).
+
+```
+{
+  confirmed: [
+    {
+      id: <numeric, sequential id>,
+      date: <date when this observation was made, ISO 8601 -format>,
+      healthCareDistrict: <health care district>
+    },
+    .
+    .
+    .
+  ],
+  deaths: [
+    <samanmuotoisia objekteja kuin yllä>
+  ]
+}
+```
+
+The health care distrticts follow naming conventions from here [täällä](https://www.kuntaliitto.fi/sosiaali-ja-terveysasiat/sairaanhoitopiirien-jasenkunnat), with the
+difference that the health care district of Helsinki and Uusimaa is called HUS.
 
 # Lisenssi: MIT-lisenssi
 
