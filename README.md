@@ -2,9 +2,40 @@
 
 Helsingin Sanomat julkaisee Suomen koronavirus-tartunnat ja niiden tiedossa olevat lähteet avoimena datana. HS on kerännyt aineiston julkisista lähteistä: tiedotustilaisuuksista, mediasta ja haastatteluista. Dataa päivitetään sitä mukaa kun uusia tietoja tulee. 
 
-Dataa saa käyttää vapaasti niin kaupallisiin kuin yksityisiin tarpeisiin. Toivomme, että data tallennetaan paikallisesti tai välimuistitetaan, mikäli se on tarkoitus julkaista laajalle yleisölle. 
+Dataa saa käyttää vapaasti niin kaupallisiin kuin yksityisiin tarpeisiin. Toivomme, että data tallennetaan paikallisesti tai välimuistitetaan, mikäli se on tarkoitus julkaista laajalle yleisölle.
 
 HS avaa datan julkiseksi, jotta muut tiedotusvälineet, kehittäjät ja datavisualistit pystyisivät paremmin hahmottamaan koronaviruksen leviämistä Suomessa. Toiveena on, että yleisön tietoisuus viruksesta paranisi ja mahdollisuudet suojautua tarunnoilta sekä arvioida tartunnan riskejä perustuisivat mahdollismman tarkkaan aineistoon.
+
+# Suora rajapinta HS:n dataan (see in English [below](#direct-interface-to-hs-data))
+
+Viimeisimmän HS:n datan voi lukea osoitteesta https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData
+(kyllä, se on suora osoite AWS Lambdan API-gatewayhyn). `GET`-pyynnöllä pääsee.
+
+## Datan formaatti
+
+Rajapinta palauttaa JSONia, joka näyttää tältä (formaatti voi vaihtua, mutta pyritään seuraamaan hyviä API-suunnittelun periaatteita
+eikä poisteta tai muuteta kenttien nimiä). Esimerkkidataa myös [täällä](latestData.json).
+
+```
+{
+  confirmed: [
+    {
+      id: <numeerinen id, juokseva numerointi>,
+      date: <havainnon aika ISO 8601 -formaatissa>,
+      healthCareDistrict: <sairaanhoitopiiri>
+    },
+    .
+    .
+    .
+  ],
+  deaths: [
+    <samanmuotoisia objekteja kuin yllä>
+  ]
+}
+```
+
+Sairaanhoitopiirien nimet kuten [täällä](https://www.kuntaliitto.fi/sosiaali-ja-terveysasiat/sairaanhoitopiirien-jasenkunnat), sillä erotuksella
+että Helsingin ja Uudenmaan sairaanhoitopiiri on esitetty muodossa HUS.
 
 # Dataa on käytetty täällä
 
@@ -20,6 +51,38 @@ HS on käyttänyt ja käyttää dataa ainakin näissä grafiikoissa:
 # Huomautus
 
 Tämä data on peräisin julkisista lähteistä. HS pyrkii kasaamaan sen mahdollisimman paikkansa pitävänä. Emme takaa, että päivitämme dataa jatkuvasti ja saatamme lopettaa datan päivittämisen ennalta ilmoittamatta, esimerkiksi tartuntatilanteen tai julkisten lähteiden muuttuessa. Saatamme myös muuttaa datarakennetta tai osoitteita ennalta ilmoittamatta.
+
+
+# Direct interface to HS data
+
+The latest data used by HS can be read from https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData
+(yes, a direct adress to a AWS Lambda API gateway). `GET` request works.
+
+## Data format
+
+The API returns JSON, whixh is structured as follows (the format may change, but good API development practices will be considered
+and field names should remain the same and fields shouldn't be removed for example). Example data [here](latestData.json).
+
+```
+{
+  confirmed: [
+    {
+      id: <numeric, sequential id>,
+      date: <date when this observation was made, ISO 8601 -format>,
+      healthCareDistrict: <health care district>
+    },
+    .
+    .
+    .
+  ],
+  deaths: [
+    <samanmuotoisia objekteja kuin yllä>
+  ]
+}
+```
+
+The health care distrticts follow naming conventions from [here](https://www.kuntaliitto.fi/sosiaali-ja-terveysasiat/sairaanhoitopiirien-jasenkunnat), with the
+difference that the health care district of Helsinki and Uusimaa is called HUS.
 
 # Lisenssi: MIT-lisenssi
 

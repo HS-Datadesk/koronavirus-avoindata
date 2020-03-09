@@ -1,0 +1,155 @@
+{
+  "confirmed": [
+    {
+      "id": "1",
+      "date": "2020-01-29T13:00:00.000Z",
+      "healthCareDistrict": "Lappi"
+    },
+    {
+      "id": "2",
+      "date": "2020-02-26T13:00:00.000Z",
+      "healthCareDistrict": "HUS"
+    },
+    {
+      "id": "3",
+      "date": "2020-03-01T13:00:00.000Z",
+      "healthCareDistrict": "HUS"
+    },
+    {
+      "id": "4",
+      "date": "2020-02-28T13:00:00.000Z",
+      "healthCareDistrict": "HUS"
+    },
+    {
+      "id": "5",
+      "date": "2020-03-01T13:00:00.000Z",
+      "healthCareDistrict": "HUS"
+    },
+    {
+      "id": "6",
+      "date": "2020-03-01T13:00:00.000Z",
+      "healthCareDistrict": "HUS"
+    },
+    {
+      "id": "7",
+      "date": "2020-03-02T13:00:00.000Z",
+      "healthCareDistrict": "HUS"
+    },
+    {
+      "id": "8",
+      "date": "2020-03-05T11:00:00.000Z",
+      "healthCareDistrict": "Kanta-Häme"
+    },
+    {
+      "id": "9",
+      "date": "2020-03-05T11:00:00.000Z",
+      "healthCareDistrict": "Pirkanmaa"
+    },
+    {
+      "id": "10",
+      "date": "2020-03-05T11:00:00.000Z",
+      "healthCareDistrict": "HUS"
+    },
+    {
+      "id": "11",
+      "date": "2020-03-05T11:00:00.000Z",
+      "healthCareDistrict": "HUS"
+    },
+    {
+      "id": "12",
+      "date": "2020-03-05T11:00:00.000Z",
+      "healthCareDistrict": "HUS"
+    },
+    {
+      "id": "13",
+      "date": "2020-03-06T10:50:00.000Z",
+      "healthCareDistrict": "HUS"
+    },
+    {
+      "id": "14",
+      "date": "2020-03-06T10:50:00.000Z",
+      "healthCareDistrict": "Etelä-Karjala"
+    },
+    {
+      "id": "15",
+      "date": "2020-03-06T10:50:00.000Z",
+      "healthCareDistrict": "Pohjois-Pohjanmaa"
+    },
+    {
+      "id": "16",
+      "date": "2020-03-07T10:50:00.000Z",
+      "healthCareDistrict": "Pirkanmaa"
+    },
+    {
+      "id": "17",
+      "date": "2020-03-07T10:50:00.000Z",
+      "healthCareDistrict": "Pirkanmaa"
+    },
+    {
+      "id": "18",
+      "date": "2020-03-07T10:50:00.000Z",
+      "healthCareDistrict": "HUS"
+    },
+    {
+      "id": "19",
+      "date": "2020-03-07T10:50:00.000Z",
+      "healthCareDistrict": "HUS"
+    },
+    {
+      "id": "20",
+      "date": "2020-03-08T10:30:00.000Z",
+      "healthCareDistrict": "Pirkanmaa"
+    },
+    {
+      "id": "21",
+      "date": "2020-03-08T10:50:00.000Z",
+      "healthCareDistrict": "HUS"
+    },
+    {
+      "id": "22",
+      "date": "2020-03-08T10:50:00.000Z",
+      "healthCareDistrict": "HUS"
+    },
+    {
+      "id": "23",
+      "date": "2020-03-08T11:00:00.000Z",
+      "healthCareDistrict": "Pohjois-Savo"
+    },
+    {
+      "id": "24",
+      "date": "2020-03-08T17:45:00.000Z",
+      "healthCareDistrict": "Varsinais-Suomi"
+    },
+    {
+      "id": "25",
+      "date": "2020-03-09T11:00:00.000Z",
+      "healthCareDistrict": "HUS"
+    },
+    {
+      "id": "26",
+      "date": "2020-03-09T11:00:00.000Z",
+      "healthCareDistrict": "HUS"
+    },
+    {
+      "id": "27",
+      "date": "2020-03-09T11:00:00.000Z",
+      "healthCareDistrict": "HUS"
+    },
+    {
+      "id": "28",
+      "date": "2020-03-09T11:00:00.000Z",
+      "healthCareDistrict": "HUS"
+    },
+    {
+      "id": "29",
+      "date": "2020-03-09T11:00:00.000Z",
+      "healthCareDistrict": "Pirkanmaa"
+    },
+    {
+      "id": "30",
+      "date": "2020-03-09T11:00:00.000Z",
+      "healthCareDistrict": "Kanta-Häme"
+    }
+  ],
+  "deaths": []
+}
