@@ -1,7 +1,10 @@
-# koronavirus-avoindata
+# Suomen koronavirus-tartuntatilanne avoimena datana
 
-HS julkaisee Suomen koronavirus-tartunnat avoimena datana. K
+Helsingin Sanomat julkaisee Suomen koronavirus-tartunnat ja niiden tiedossa olevat lähteet avoimena datana. HS on kerännyt aineiston julkisista lähteistä: tiedotustilaisuuksista, mediasta ja haastatteluista. Dataa päivitetään sitä mukaa kun uusia tietoja tulee. 
 
+Dataa saa käyttää vapaasti niin kaupallisiin kuin yksityisiin tarpeisiin. Toivomme, että data tallennetaan paikallisesti tai välimuistitetaan, mikäli se on tarkoitus julkaista laajalle yleisölle.
+
+HS avaa datan julkiseksi, jotta muut tiedotusvälineet, kehittäjät ja datavisualistit pystyisivät paremmin hahmottamaan koronaviruksen leviämistä Suomessa. Toiveena on, että yleisön tietoisuus viruksesta paranisi ja mahdollisuudet suojautua tarunnoilta sekä arvioida tartunnan riskejä perustuisivat mahdollismman tarkkaan aineistoon.
 
 # Suora rajapinta HS:n dataan (see in English [below](#direct-interface-to-hs-data))
 
@@ -36,11 +39,18 @@ että Helsingin ja Uudenmaan sairaanhoitopiiri on esitetty muodossa HUS.
 
 # Dataa on käytetty täällä
 
+## HS:n grafiikat
+
+HS on käyttänyt ja käyttää dataa ainakin näissä grafiikoissa:
+- https://dynamic.hs.fi/2020/corona-embed-finland/?scope=Global
+
+## Muiden visualisoinnit datan pohjalta
+
 (Tee pull request jos haluat omasi tänne.)
 
 # Huomautus
 
-Tämä data on peräisin julkisista lähteistä. HS pyrkii kasaamaan sen mahdollisimman paikkansa pitävänä. Emme takaa, että päivitämme dataa jatkuvasti ja saatamme lopettaa datan päivittämisen ennalta ilmoittamatta.
+Tämä data on peräisin julkisista lähteistä. HS pyrkii kasaamaan sen mahdollisimman paikkansa pitävänä. Emme takaa, että päivitämme dataa jatkuvasti ja saatamme lopettaa datan päivittämisen ennalta ilmoittamatta, esimerkiksi tartuntatilanteen tai julkisten lähteiden muuttuessa. Saatamme myös muuttaa datarakennetta tai osoitteita ennalta ilmoittamatta.
 
 
 # Direct interface to HS data
