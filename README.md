@@ -3,7 +3,7 @@
 HS julkaisee Suomen koronavirus-tartunnat avoimena datana. K
 
 
-# Suora rajapinta HS:n dataan (see in English below)
+# Suora rajapinta HS:n dataan (see in English [below](#direct-interface-to-hs-data))
 
 Viimeisimmän HS:n datan voi lukea osoitteesta https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData
 (kyllä, se on suora osoite AWS Lambdan API-gatewayhyn). `GET`-pyynnöllä pääsee.
@@ -71,7 +71,7 @@ and field names should remain the same and fields shouldn't be removed for examp
 }
 ```
 
-The health care distrticts follow naming conventions from here [täällä](https://www.kuntaliitto.fi/sosiaali-ja-terveysasiat/sairaanhoitopiirien-jasenkunnat), with the
+The health care distrticts follow naming conventions from [here](https://www.kuntaliitto.fi/sosiaali-ja-terveysasiat/sairaanhoitopiirien-jasenkunnat), with the
 difference that the health care district of Helsinki and Uusimaa is called HUS.
 
 # Lisenssi: MIT-lisenssi
