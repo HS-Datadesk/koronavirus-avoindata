@@ -69,6 +69,8 @@ HS on käyttänyt ja käyttää dataa ainakin näissä grafiikoissa:
 
 [Koronavirus-tilanne maittain](https://julleht.shinyapps.io/corona/) ([Julleht](https://twitter.com/Julleht))
 
+[Koronaviruksen tartutukset](https://observablehq.com/@kallehjerppe/koronatartunnat-suomessa) ([kallehj](https://github.com/kallehjerppe))
+
 # Huomautus
 
 Tämä data on peräisin julkisista lähteistä. HS pyrkii kasaamaan sen mahdollisimman paikkansa pitävänä. Emme takaa, että päivitämme dataa jatkuvasti ja saatamme lopettaa datan päivittämisen ennalta ilmoittamatta, esimerkiksi tartuntatilanteen tai julkisten lähteiden muuttuessa. Saatamme myös muuttaa datarakennetta tai osoitteita ennalta ilmoittamatta.
