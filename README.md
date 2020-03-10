@@ -62,6 +62,8 @@ HS on käyttänyt ja käyttää dataa ainakin näissä grafiikoissa:
 [Corona Monitor](https://github.com/Matsuuu/finnish-corona-statistics) ([Matsuuu](https://github.com/Matsuuu))
 [Sairaanhoitopiirit kartalla](https://github.com/VuokkoH/koronavirus-avoindata) ([VuokkoH](https://github.com/VuokkoH))
 [Suomen koronavirus-tartuntatilanne](https://korona.kans.io/) ([valstu](https://github.com/valstu/korona-info))
+[Koronavirus-twitterbotti](https://twitter.com/Koronabotti) ([Duukkis](http://www.palomaki.info/))
+[Koronavirus-tilanne maittain](https://julleht.shinyapps.io/corona/) ([Julleht](https://twitter.com/Julleht))
 
 # Huomautus
 
