@@ -4,7 +4,7 @@ Helsingin Sanomat julkaisee Suomen koronavirus-tartunnat ja niiden tiedossa olev
 
 Dataa saa käyttää vapaasti niin kaupallisiin kuin yksityisiin tarpeisiin. Toivomme, että data tallennetaan paikallisesti tai välimuistitetaan, mikäli se on tarkoitus julkaista laajalle yleisölle.
 
-HS avaa datan julkiseksi, jotta muut tiedotusvälineet, kehittäjät ja datavisualistit pystyisivät paremmin hahmottamaan koronaviruksen leviämistä Suomessa. Toiveena on, että yleisön tietoisuus viruksesta paranisi ja mahdollisuudet suojautua tarunnoilta sekä arvioida tartunnan riskejä perustuisivat mahdollismman tarkkaan aineistoon.
+HS avaa datan julkiseksi, jotta muut tiedotusvälineet, kehittäjät ja datavisualistit pystyisivät paremmin hahmottamaan koronaviruksen leviämistä Suomessa. Toiveena on, että yleisön tietoisuus viruksesta paranisi ja mahdollisuudet suojautua tartunnoilta sekä arvioida tartunnan riskejä perustuisivat mahdollisimman tarkkaan aineistoon.
 
 # Suora rajapinta HS:n dataan (see in English [below](#direct-interface-to-hs-data))
 
