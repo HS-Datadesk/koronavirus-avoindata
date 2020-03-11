@@ -71,7 +71,10 @@ HS on käyttänyt ja käyttää dataa ainakin näissä grafiikoissa:
 
 [Koronaviruksen tartutukset](https://observablehq.com/@kallehjerppe/koronatartunnat-suomessa) ([kallehj](https://github.com/kallehjerppe))
 
+[Verkkograafi Koronatartuntaketjuista](https://github.com/Miksus/corona_cases_finland) ([Miksus](https://github.com/Miksus))
+
 [Aktiiviset tartunnat kartalla](https://koronatartunnat.netlify.com/) ([Jonniek](https://github.com/jonniek))
+
 
 # Huomautus
 
