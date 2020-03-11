@@ -75,6 +75,8 @@ HS on käyttänyt ja käyttää dataa ainakin näissä grafiikoissa:
 
 [Aktiiviset tartunnat kartalla](https://koronatartunnat.netlify.com/) ([Jonniek](https://github.com/jonniek))
 
+[Koronavirus-Telegrambotti](https://t.me/coronavirusfinland) ([source](https://gitlab.com/ultsi-projects/coronafinbot)) ([ultsi](https://gitlab.com/ultsi))
+
 
 # Huomautus
 
