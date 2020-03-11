@@ -67,7 +67,7 @@ HS on käyttänyt ja käyttää dataa ainakin näissä grafiikoissa:
 
 [Koronavirus-twitterbotti](https://twitter.com/Koronabotti) ([Duukkis](http://www.palomaki.info/))
 
-[Koronavirus-tilanne maittain](https://julleht.shinyapps.io/corona/) ([Julleht](https://twitter.com/Julleht))
+[Koronavirus-tilanne maittain](https://projects.databyro.fi/korona/) ([Julleht](https://twitter.com/Julleht))
 
 [Koronaviruksen tartutukset](https://observablehq.com/@kallehjerppe/koronatartunnat-suomessa) ([kallehj](https://github.com/kallehjerppe))
 
