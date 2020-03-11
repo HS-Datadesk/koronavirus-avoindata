@@ -39,6 +39,16 @@ eikä poisteta tai muuteta kenttien nimiä). Esimerkkidataa myös [täällä](ex
     .
     .
     .
+  ],
+  recovered: [
+    {
+      id: <numeerinen id, juokseva numerointi. ei liity muihin id:eihin>,
+      date: <havainnon aika ISO 8601 -formaatissa>,
+      healthCareDistrict: <sairaanhoitopiiri>,
+    },
+    .
+    .
+    .
   ]
 }
 ```
@@ -47,6 +57,11 @@ Sairaanhoitopiirien nimet kuten [täällä](https://www.kuntaliitto.fi/sosiaali-
 että Helsingin ja Uudenmaan sairaanhoitopiiri on esitetty muodossa HUS.
 
 `infectionSource` -kenttää voidaan käyttää tartuntaketjujen havainnollistamiseen.
+
+`recovered`-kentän listaus parantuneista tapauksista on hyvin best effort -tyyppinen tätä kirjoittaessa. Katso lisää keskustelua aiheesta
+[täältä](https://github.com/HS-Datadesk/koronavirus-avoindata/issues/12). Jos haluat kokeilla jonkinlaista kaavaa (esimerkiksi yli kaksi viikkoa
+vanhat havainnot oletetaan parantuneiksi), niin voit sen itse tehdä - tarjottuun dataan ei tulla tekemään tällaisia laskelmia, vaan siinä ilmoitetaan
+tiedot sellaisina kuin ne on lähteistä saatu ja luotettavaksi arvioitu.
 
 # Dataa on käytetty täällä
 
@@ -116,6 +131,16 @@ and field names should remain the same and fields shouldn't be removed for examp
     .
     .
     .
+  ],
+  recovered: [
+    {
+      id: <numeric, sequential id. not realted to other ids>,
+      date: <date when this observation was made, ISO 8601 -format>,
+      healthCareDistrict: <health care district>,
+    },
+    .
+    .
+    .
   ]
 }
 ```
@@ -124,6 +149,11 @@ The health care distrticts follow naming conventions from [here](https://www.kun
 difference that the health care district of Helsinki and Uusimaa is called HUS.
 
 `infectionSource` field can be used to inspect infection chains.
+
+The list in `recoverd` field is very much a best effort attempt at showing the recovered numbers. The topic has been disussed [here]
+(https://github.com/HS-Datadesk/koronavirus-avoindata/issues/12). If you want to try out a formnula (for example, all confirmed cases
+that are older than two weeks are counted as recovered) feel free to do so. The data we offer here will not have formulas or
+calculations such as that implemented, we'll simply report the data as given by our
 
 # Lisenssi: MIT-lisenssi
 
