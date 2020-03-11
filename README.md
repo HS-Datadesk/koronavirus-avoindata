@@ -14,7 +14,7 @@ Viimeisimmän HS:n datan voi lukea osoitteesta https://w3qa5ydb4l.execute-api.eu
 ## Datan formaatti
 
 Rajapinta palauttaa JSONia, joka näyttää tältä (formaatti voi vaihtua, mutta pyritään seuraamaan hyviä API-suunnittelun periaatteita
-eikä poisteta tai muuteta kenttien nimiä). Esimerkkidataa myös [täällä](latestData.json).
+eikä poisteta tai muuteta kenttien nimiä). Esimerkkidataa myös [täällä](exampleData.json).
 
 ```
 {
@@ -91,7 +91,7 @@ The latest data used by HS can be read from https://w3qa5ydb4l.execute-api.eu-we
 ## Data format
 
 The API returns JSON, which is structured as follows (the format may change, but good API development practices will be considered
-and field names should remain the same and fields shouldn't be removed for example). Example data [here](latestData.json).
+and field names should remain the same and fields shouldn't be removed for example). Example data [here](exampleData.json).
 
 ```
 {
