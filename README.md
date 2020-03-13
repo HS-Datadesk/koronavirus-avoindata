@@ -70,6 +70,8 @@ tiedot sellaisina kuin ne on lähteistä saatu ja luotettavaksi arvioitu.
 HS on käyttänyt ja käyttää dataa ainakin näissä grafiikoissa:
 - https://dynamic.hs.fi/2020/corona-embed-finland/?scope=Global
 
+- https://dynamic.hs.fi/2020/corona-embed-grid/?composition=[%22header%22,%22buttons%22,%22totals%22,%22chart%22,%22grid%22,%22map%22,%22tracking%22,%22credits%22]
+
 ## Muiden visualisoinnit datan pohjalta
 
 (Tee pull request jos haluat omasi tänne.)
