@@ -94,6 +94,8 @@ HS on käyttänyt ja käyttää dataa ainakin näissä grafiikoissa:
 
 [Koronavirus-Telegrambotti](https://t.me/coronavirusfinland) ([source](https://gitlab.com/ultsi-projects/coronafinbot)) ([ultsi](https://gitlab.com/ultsi))
 
+[Koronapaniikki.fi - Koronavirustilanne kartalla maakunnittain](https://koronapaniikki.fi/) ([source](https://gitlab.com/mouhgang/koronapaniikki)) ([mouhgang](https://gitlab.com/groups/mouhgang/))
+
 [State of corona in Finland](https://coronainfinland.herokuapp.com/) ([pauliinasol](https://github.com/pauliinasol/corona-in-finland/))
 
 # Huomautus
