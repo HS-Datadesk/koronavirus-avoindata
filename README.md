@@ -42,7 +42,7 @@ eikä poisteta tai muuteta kenttien nimiä). Esimerkkidataa myös [täällä](ex
   ],
   recovered: [
     {
-      id: <numeerinen id, juokseva numerointi. ei liity muihin id:eihin>,
+      id: <numeerinen id, juokseva numerointi. ei liity muihin id:ihin>,
       date: <havainnon aika ISO 8601 -formaatissa>,
       healthCareDistrict: <sairaanhoitopiiri>,
     },
@@ -101,7 +101,7 @@ Tämä data on peräisin julkisista lähteistä. HS pyrkii kasaamaan sen mahdoll
 # Direct interface to HS data
 
 The latest data used by HS can be read from https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData
-(yes, a direct adress to a AWS Lambda API gateway). `GET` request works.
+(yes, a direct address to an AWS Lambda API gateway). `GET` request works.
 
 ## Data format
 
@@ -135,7 +135,7 @@ All times in UTC.
   ],
   recovered: [
     {
-      id: <numeric, sequential id. not realted to other ids>,
+      id: <numeric, sequential id. not related to other ids>,
       date: <date when this observation was made, ISO 8601 -format>,
       healthCareDistrict: <health care district>,
     },
@@ -151,10 +151,8 @@ difference that the health care district of Helsinki and Uusimaa is called HUS.
 
 `infectionSource` field can be used to inspect infection chains.
 
-The list in `recoverd` field is very much a best effort attempt at showing the recovered numbers. The topic has been disussed [here]
-(https://github.com/HS-Datadesk/koronavirus-avoindata/issues/12). If you want to try out a formnula (for example, all confirmed cases
-that are older than two weeks are counted as recovered) feel free to do so. The data we offer here will not have formulas or
-calculations such as that implemented, we'll simply report the data as given by our
+The list in `recovered` field is very much a best effort attempt at showing the recovered numbers. The topic has been discussed [here](https://github.com/HS-Datadesk/koronavirus-avoindata/issues/12). If you want to try out a formula (for example, counting all confirmed
+cases that are older than two weeks as recovered) feel free to do so. The data offered here will not be subject to such calculations, but will instead provide information as obtained from the sources considered to be reliable.
 
 # Lisenssi: MIT-lisenssi
 
