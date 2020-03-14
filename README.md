@@ -96,6 +96,8 @@ HS on käyttänyt ja käyttää dataa ainakin näissä grafiikoissa:
 
 [Koronapaniikki.fi - Koronavirustilanne kartalla maakunnittain](https://koronapaniikki.fi/) ([source](https://gitlab.com/mouhgang/koronapaniikki)) ([mouhgang](https://gitlab.com/groups/mouhgang/))
 
+[State of corona in Finland](https://coronainfinland.herokuapp.com/) ([pauliinasol](https://github.com/pauliinasol/corona-in-finland/))
+
 # Huomautus
 
 Tämä data on peräisin julkisista lähteistä. HS pyrkii kasaamaan sen mahdollisimman paikkansa pitävänä. Emme takaa, että päivitämme dataa jatkuvasti ja saatamme lopettaa datan päivittämisen ennalta ilmoittamatta, esimerkiksi tartuntatilanteen tai julkisten lähteiden muuttuessa. Saatamme myös muuttaa datarakennetta tai osoitteita ennalta ilmoittamatta.
