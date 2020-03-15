@@ -100,6 +100,8 @@ HS on käyttänyt ja käyttää dataa ainakin näissä grafiikoissa:
 
 [Hoitsubotti - telegram-botti](https://t.me/Hoitsubot) ([Karvaporsas](https://github.com/Karvaporsas/hoitsubotti))
 
+[COVID-19 Finland: Discord & Telegram Bot](https://github.com/jhamberg/fi-corona-bot) ([jhamberg](https://github.com/jhamberg))
+
 # Huomautus
 
 Tämä data on peräisin julkisista lähteistä. HS pyrkii kasaamaan sen mahdollisimman paikkansa pitävänä. Emme takaa, että päivitämme dataa jatkuvasti ja saatamme lopettaa datan päivittämisen ennalta ilmoittamatta, esimerkiksi tartuntatilanteen tai julkisten lähteiden muuttuessa. Saatamme myös muuttaa datarakennetta tai osoitteita ennalta ilmoittamatta.
