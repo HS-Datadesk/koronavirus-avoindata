@@ -20,7 +20,7 @@ eikä poisteta tai muuteta kenttien nimiä). Esimerkkidataa myös [täällä](ex
 {
   confirmed: [
     {
-      id: <numeerinen id, juokseva numerointi>,
+      id: <numeerinen id merkkijonomuodossa (kuten "1"), juokseva numerointi>,
       date: <havainnon aika ISO 8601 -formaatissa>,
       healthCareDistrict: <sairaanhoitopiiri>,
       infectionSource: <tartunnan lähteen id (eli tästä listasta), "unknown" jos ei tiedetä ja "related to earlier" jos tarkkaa lähdettä ei tiedetä mutta tiedetään että liittyy johonkin aiempaan tapaukseen>,
@@ -32,7 +32,7 @@ eikä poisteta tai muuteta kenttien nimiä). Esimerkkidataa myös [täällä](ex
   ],
   deaths: [
     {
-      id: <numeerinen id, juokseva numerointi>,
+      id: <numeerinen id merkkijonomuodossa (kuten "1"), juokseva numerointi>,
       date: <havainnon aika ISO 8601 -formaatissa>,
       healthCareDistrict: <sairaanhoitopiiri>,
     },
@@ -42,7 +42,7 @@ eikä poisteta tai muuteta kenttien nimiä). Esimerkkidataa myös [täällä](ex
   ],
   recovered: [
     {
-      id: <numeerinen id, juokseva numerointi. ei liity muihin id:ihin>,
+      id: <numeerinen id merkkijonomuodossa (kuten "1"), juokseva numerointi. ei liity muihin id:ihin>,
       date: <havainnon aika ISO 8601 -formaatissa>,
       healthCareDistrict: <sairaanhoitopiiri>,
     },
@@ -122,7 +122,7 @@ All times in UTC.
 {
   confirmed: [
     {
-      id: <numeric, sequential id>,
+      id: <numeric, sequential id in string format (such as "1")>,
       date: <date when this observation was made, ISO 8601 -format>,
       healthCareDistrict: <health care district>,
       infectionSource: <id of the infection source (from this array), "unknown" if unknown and "related to earlier" if we cannot pinpoint the exact source but know it's from known exposure>,
@@ -134,7 +134,7 @@ All times in UTC.
   ],
   deaths: [
     {
-      id: <numeric, sequential id>,
+      id: <numeric, sequential id in string format (such as "1")>,
       date: <date when this observation was made, ISO 8601 -format>,
       healthCareDistrict: <health care district>,
     },
@@ -144,7 +144,7 @@ All times in UTC.
   ],
   recovered: [
     {
-      id: <numeric, sequential id. not related to other ids>,
+      id: <numeric, sequential id in string format (such as "1"). not related to other ids>,
       date: <date when this observation was made, ISO 8601 -format>,
       healthCareDistrict: <health care district>,
     },
