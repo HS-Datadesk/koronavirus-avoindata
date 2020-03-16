@@ -102,6 +102,9 @@ HS on käyttänyt ja käyttää dataa ainakin näissä grafiikoissa:
 
 [COVID-19 Finland: Discord & Telegram Bot](https://github.com/jhamberg/fi-corona-bot) ([jhamberg](https://github.com/jhamberg))
 
+[A Map of the Coronavirus disease (COVID-19) outbreak in Finland](https://finland-coronavirus-map.netlify.com/) ([Lovell D'souza](https://github.com/lovelldies))
+
+
 # Huomautus
 
 Tämä data on peräisin julkisista lähteistä. HS pyrkii kasaamaan sen mahdollisimman paikkansa pitävänä. Emme takaa, että päivitämme dataa jatkuvasti ja saatamme lopettaa datan päivittämisen ennalta ilmoittamatta, esimerkiksi tartuntatilanteen tai julkisten lähteiden muuttuessa. Saatamme myös muuttaa datarakennetta tai osoitteita ennalta ilmoittamatta.
