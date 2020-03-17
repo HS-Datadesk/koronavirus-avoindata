@@ -403,12 +403,12 @@
   "deaths": [],
   "recovered": [
     {
-      "id": 1,
+      "id": "1",
       "date": "2020-02-12T10:00:00.000Z",
       "healthCareDistrict": "Lappi"
     },
     {
-      "id": 2,
+      "id": "2",
       "date": "2020-02-10T08:45:00.000Z",
       "healthCareDistrict": "Kanta-Häme"
     }
