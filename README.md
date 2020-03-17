@@ -106,6 +106,8 @@ HS on käyttänyt ja käyttää dataa ainakin näissä grafiikoissa:
 
 [Korona-animaatio](https://github.com/AnttiHaerkoenen/korona-animaatio) ([Antti Härkönen](https://github.com/AnttiHaerkoenen))
 
+[Finland COVID-19 data](https://avicted.github.io/covid-19-finland) ([Avicted](https://github.com/Avicted/covid-19-finland))
+
 
 # Huomautus
 
