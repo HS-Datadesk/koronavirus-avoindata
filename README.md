@@ -22,7 +22,7 @@ eikä poisteta tai muuteta kenttien nimiä). Esimerkkidataa myös [täällä](ex
     {
       id: <numeerinen id merkkijonomuodossa (kuten "1"), juokseva numerointi>,
       date: <havainnon aika ISO 8601 -formaatissa>,
-      healthCareDistrict: <sairaanhoitopiiri>,
+      healthCareDistrict: <sairaanhoitopiiri. null jos ei tiedossa>,
       infectionSource: <tartunnan lähteen id (eli tästä listasta), "unknown" jos ei tiedetä ja "related to earlier" jos tarkkaa lähdettä ei tiedetä mutta tiedetään että liittyy johonkin aiempaan tapaukseen>,
       infectionSourceCountry: <jos tiedossa, infection lähdemaa ISO 3166-1 alpha-3 -formaatissa>
     },
@@ -110,6 +110,9 @@ HS on käyttänyt ja käyttää dataa ainakin näissä grafiikoissa:
 
 [koronakartta.info - Korona suomessa, historiallinen leviäminen](https://koronakartta.info/) ([source](https://github.com/Marantle/KoronaKartta)) ([Marantle](https://github.com/Marantle))
 
+[Excel makro](https://github.com/jussivirkkala/excel) ([Jussi Virkkala](https://twitter.com/jussivirkkala))
+
+
 # Huomautus
 
 Tämä data on peräisin julkisista lähteistä. HS pyrkii kasaamaan sen mahdollisimman paikkansa pitävänä. Emme takaa, että päivitämme dataa jatkuvasti ja saatamme lopettaa datan päivittämisen ennalta ilmoittamatta, esimerkiksi tartuntatilanteen tai julkisten lähteiden muuttuessa. Saatamme myös muuttaa datarakennetta tai osoitteita ennalta ilmoittamatta.
@@ -132,7 +135,7 @@ All times in UTC.
     {
       id: <numeric, sequential id in string format (such as "1")>,
       date: <date when this observation was made, ISO 8601 -format>,
-      healthCareDistrict: <health care district>,
+      healthCareDistrict: <health care district. null if unknown>,
       infectionSource: <id of the infection source (from this array), "unknown" if unknown and "related to earlier" if we cannot pinpoint the exact source but know it's from known exposure>,
       infectionSourceCountry: <if known, infection source country in ISO 3166-1 alpha-3 format>
     },
