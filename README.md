@@ -22,7 +22,7 @@ eikä poisteta tai muuteta kenttien nimiä). Esimerkkidataa myös [täällä](ex
     {
       id: <numeerinen id merkkijonomuodossa (kuten "1"), juokseva numerointi>,
       date: <havainnon aika ISO 8601 -formaatissa>,
-      healthCareDistrict: <sairaanhoitopiiri>,
+      healthCareDistrict: <sairaanhoitopiiri. null jos ei tiedossa>,
       infectionSource: <tartunnan lähteen id (eli tästä listasta), "unknown" jos ei tiedetä ja "related to earlier" jos tarkkaa lähdettä ei tiedetä mutta tiedetään että liittyy johonkin aiempaan tapaukseen>,
       infectionSourceCountry: <jos tiedossa, infection lähdemaa ISO 3166-1 alpha-3 -formaatissa>
     },
@@ -131,7 +131,7 @@ All times in UTC.
     {
       id: <numeric, sequential id in string format (such as "1")>,
       date: <date when this observation was made, ISO 8601 -format>,
-      healthCareDistrict: <health care district>,
+      healthCareDistrict: <health care district. null if unknown>,
       infectionSource: <id of the infection source (from this array), "unknown" if unknown and "related to earlier" if we cannot pinpoint the exact source but know it's from known exposure>,
       infectionSourceCountry: <if known, infection source country in ISO 3166-1 alpha-3 format>
     },
