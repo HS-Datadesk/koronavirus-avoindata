@@ -108,6 +108,7 @@ HS on käyttänyt ja käyttää dataa ainakin näissä grafiikoissa:
 
 [Finland COVID-19 data](https://avicted.github.io/covid-19-finland) ([Avicted](https://github.com/Avicted/covid-19-finland))
 
+[Excel makro](https://github.com/jussivirkkala/excel) ([Jussi Virkkala](https://twitter.com/jussivirkkala))
 
 # Huomautus
 
