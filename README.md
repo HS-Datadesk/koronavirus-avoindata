@@ -108,7 +108,10 @@ HS on käyttänyt ja käyttää dataa ainakin näissä grafiikoissa:
 
 [Finland COVID-19 data](https://avicted.github.io/covid-19-finland) ([Avicted](https://github.com/Avicted/covid-19-finland))
 
+[koronakartta.info - Korona suomessa, historiallinen leviäminen](https://koronakartta.info/) ([source](https://github.com/Marantle/KoronaKartta)) ([Marantle](https://github.com/Marantle))
+
 [Excel makro](https://github.com/jussivirkkala/excel) ([Jussi Virkkala](https://twitter.com/jussivirkkala))
+
 
 # Huomautus
 
