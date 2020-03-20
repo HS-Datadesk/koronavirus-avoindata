@@ -112,6 +112,8 @@ HS on käyttänyt ja käyttää dataa ainakin näissä grafiikoissa:
 
 [Excel makro](https://github.com/jussivirkkala/excel) ([Jussi Virkkala](https://twitter.com/jussivirkkala))
 
+[Koronatartunnat Suomessa](https://eevis.codes/covid-19/) ([source](https://github.com/eevajonnapanula/covid-19)) ([Eevis Panula](https://github.com/eevajonnapanula))
+
 
 # Huomautus
 
