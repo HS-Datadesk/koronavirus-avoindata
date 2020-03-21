@@ -114,6 +114,8 @@ HS on käyttänyt ja käyttää dataa ainakin näissä grafiikoissa:
 
 [Koronatartunnat Suomessa](https://eevis.codes/covid-19/) ([source](https://github.com/eevajonnapanula/covid-19)) ([Eevis Panula](https://github.com/eevajonnapanula))
 
+[Finland Corona Info](https://jingzhe.github.io/contribute/) ([source](https://github.com/jingzhe/contribute)) ([Jingzhe Yu](https://github.com/jingzhe))
+
 
 # Huomautus
 
