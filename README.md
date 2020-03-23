@@ -116,6 +116,8 @@ HS on käyttänyt ja käyttää dataa ainakin näissä grafiikoissa:
 
 [Finland Corona Info](https://jingzhe.github.io/contribute/) ([source](https://github.com/jingzhe/contribute)) ([Jingzhe Yu](https://github.com/jingzhe))
 
+[Covid-19 per 100,000 people](https://observablehq.com/@lounjukk/covid-19-per-capita-visualisation-test#FIN) ([lounjukk](https://github.com/lounjukk))
+
 
 # Huomautus
 
