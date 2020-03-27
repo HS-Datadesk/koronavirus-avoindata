@@ -1,3 +1,9 @@
+# IMPORTANT: THL HAS PUBLISHED THEIR DATA
+
+THL has published their own data [here](https://thl.fi/fi/tilastot-ja-data/aineistot-ja-palvelut/avoin-data/varmistetut-koronatapaukset-suomessa-covid-19-).
+I recommend everyone takes a look at that. The future of this API is uncertain - it's not going to vanish without notice, but you should
+look into the actual source of truth. At the moment of writing this they don't have data on deaths and they seem to only update the data every morning 09:30.
+
 # Suomen koronavirus-tartuntatilanne avoimena datana
 
 Helsingin Sanomat julkaisee Suomen koronavirus-tartunnat ja niiden tiedossa olevat lähteet avoimena datana. HS on kerännyt aineiston julkisista lähteistä: tiedotustilaisuuksista, mediasta ja haastatteluista. Dataa päivitetään sitä mukaa kun uusia tietoja tulee. 
