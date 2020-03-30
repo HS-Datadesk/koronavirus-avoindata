@@ -124,6 +124,8 @@ HS on käyttänyt ja käyttää dataa ainakin näissä grafiikoissa:
 
 [Covid-19 per 100,000 people](https://observablehq.com/@lounjukk/covid-19-per-capita-visualisation-test#FIN) ([lounjukk](https://github.com/lounjukk))
 
+[COVID19 Bot a.k.a Corona-chan - Discord Botti](https://github.com/Tatatofly/COVID19-Bot) ([Tatatofly](https://github.com/Tatatofly))
+
 
 # Huomautus
 
