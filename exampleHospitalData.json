@@ -1,0 +1,268 @@
+{
+  "hospitalised": [
+    {
+      "date": "2020-03-25T13:00:00.000Z",
+      "area": "HYKS",
+      "totalHospitalised": 63,
+      "inWard": 45,
+      "inIcu": 18,
+      "dead": 2
+    },
+    {
+      "date": "2020-03-25T13:00:00.000Z",
+      "area": "KYS",
+      "totalHospitalised": 6,
+      "inWard": 3,
+      "inIcu": 3,
+      "dead": 0
+    },
+    {
+      "date": "2020-03-25T13:00:00.000Z",
+      "area": "OYS",
+      "totalHospitalised": 4,
+      "inWard": 3,
+      "inIcu": 1,
+      "dead": 0
+    },
+    {
+      "date": "2020-03-25T13:00:00.000Z",
+      "area": "TAYS",
+      "totalHospitalised": 7,
+      "inWard": 7,
+      "inIcu": 0,
+      "dead": 1
+    },
+    {
+      "date": "2020-03-25T13:00:00.000Z",
+      "area": "TYKS",
+      "totalHospitalised": 2,
+      "inWard": 2,
+      "inIcu": 0,
+      "dead": 0
+    },
+    {
+      "date": "2020-03-25T13:00:00.000Z",
+      "area": "Finland",
+      "totalHospitalised": 82,
+      "inWard": 60,
+      "inIcu": 22,
+      "dead": 3
+    },
+    {
+      "date": "2020-03-26T13:00:00.000Z",
+      "area": "HYKS",
+      "totalHospitalised": 74,
+      "inWard": 56,
+      "inIcu": 18,
+      "dead": 3
+    },
+    {
+      "date": "2020-03-26T13:00:00.000Z",
+      "area": "Other than HYKS",
+      "totalHospitalised": 22,
+      "inWard": 16,
+      "inIcu": 6,
+      "dead": 1
+    },
+    {
+      "date": "2020-03-26T13:00:00.000Z",
+      "area": "Finland",
+      "totalHospitalised": 96,
+      "inWard": 72,
+      "inIcu": 24,
+      "dead": 4
+    },
+    {
+      "date": "2020-03-27T14:00:00.000Z",
+      "area": "HYKS",
+      "totalHospitalised": 81,
+      "inWard": 57,
+      "inIcu": 24,
+      "dead": 6
+    },
+    {
+      "date": "2020-03-27T14:00:00.000Z",
+      "area": "KYS",
+      "totalHospitalised": 8,
+      "inWard": 4,
+      "inIcu": 4,
+      "dead": 0
+    },
+    {
+      "date": "2020-03-27T14:00:00.000Z",
+      "area": "OYS",
+      "totalHospitalised": 6,
+      "inWard": 5,
+      "inIcu": 1,
+      "dead": 0
+    },
+    {
+      "date": "2020-03-27T14:00:00.000Z",
+      "area": "TAYS",
+      "totalHospitalised": 7,
+      "inWard": 7,
+      "inIcu": 0,
+      "dead": 1
+    },
+    {
+      "date": "2020-03-27T14:00:00.000Z",
+      "area": "TYKS",
+      "totalHospitalised": 6,
+      "inWard": 3,
+      "inIcu": 3,
+      "dead": 0
+    },
+    {
+      "date": "2020-03-27T14:00:00.000Z",
+      "area": "Finland",
+      "totalHospitalised": 108,
+      "inWard": 76,
+      "inIcu": 32,
+      "dead": 7
+    },
+    {
+      "date": "2020-03-28T14:55:00.000Z",
+      "area": "HYKS",
+      "totalHospitalised": 83,
+      "inWard": 60,
+      "inIcu": 23,
+      "dead": 7
+    },
+    {
+      "date": "2020-03-28T14:55:00.000Z",
+      "area": "KYS",
+      "totalHospitalised": 8,
+      "inWard": 4,
+      "inIcu": 4,
+      "dead": 0
+    },
+    {
+      "date": "2020-03-28T14:55:00.000Z",
+      "area": "OYS",
+      "totalHospitalised": 6,
+      "inWard": 4,
+      "inIcu": 2,
+      "dead": 1
+    },
+    {
+      "date": "2020-03-28T14:55:00.000Z",
+      "area": "TAYS",
+      "totalHospitalised": 8,
+      "inWard": 8,
+      "inIcu": 0,
+      "dead": 1
+    },
+    {
+      "date": "2020-03-28T14:55:00.000Z",
+      "area": "TYKS",
+      "totalHospitalised": 7,
+      "inWard": 5,
+      "inIcu": 2,
+      "dead": 0
+    },
+    {
+      "date": "2020-03-28T14:55:00.000Z",
+      "area": "Finland",
+      "totalHospitalised": 112,
+      "inWard": 81,
+      "inIcu": 31,
+      "dead": 9
+    },
+    {
+      "date": "2020-03-29T12:00:00.000Z",
+      "area": "HYKS",
+      "totalHospitalised": 99,
+      "inWard": 69,
+      "inIcu": 30,
+      "dead": 9
+    },
+    {
+      "date": "2020-03-29T12:00:00.000Z",
+      "area": "KYS",
+      "totalHospitalised": 13,
+      "inWard": 8,
+      "inIcu": 5,
+      "dead": 0
+    },
+    {
+      "date": "2020-03-29T12:00:00.000Z",
+      "area": "OYS",
+      "totalHospitalised": 6,
+      "inWard": 4,
+      "inIcu": 2,
+      "dead": 1
+    },
+    {
+      "date": "2020-03-29T12:00:00.000Z",
+      "area": "TAYS",
+      "totalHospitalised": 8,
+      "inWard": 6,
+      "inIcu": 2,
+      "dead": 1
+    },
+    {
+      "date": "2020-03-29T12:00:00.000Z",
+      "area": "TYKS",
+      "totalHospitalised": 8,
+      "inWard": 6,
+      "inIcu": 2,
+      "dead": 0
+    },
+    {
+      "date": "2020-03-29T12:00:00.000Z",
+      "area": "Finland",
+      "totalHospitalised": 134,
+      "inWard": 93,
+      "inIcu": 41,
+      "dead": 11
+    },
+    {
+      "date": "2020-03-30T12:45:00.000Z",
+      "area": "HYKS",
+      "totalHospitalised": 108,
+      "inWard": 70,
+      "inIcu": 38,
+      "dead": 10
+    },
+    {
+      "date": "2020-03-30T12:45:00.000Z",
+      "area": "KYS",
+      "totalHospitalised": 13,
+      "inWard": 8,
+      "inIcu": 5,
+      "dead": 1
+    },
+    {
+      "date": "2020-03-30T12:45:00.000Z",
+      "area": "OYS",
+      "totalHospitalised": 6,
+      "inWard": 4,
+      "inIcu": 2,
+      "dead": 1
+    },
+    {
+      "date": "2020-03-30T12:45:00.000Z",
+      "area": "TAYS",
+      "totalHospitalised": 9,
+      "inWard": 7,
+      "inIcu": 2,
+      "dead": 1
+    },
+    {
+      "date": "2020-03-30T12:45:00.000Z",
+      "area": "TYKS",
+      "totalHospitalised": 7,
+      "inWard": 5,
+      "inIcu": 2,
+      "dead": 0
+    },
+    {
+      "date": "2020-03-30T12:45:00.000Z",
+      "area": "Finland",
+      "totalHospitalised": 143,
+      "inWard": 94,
+      "inIcu": 49,
+      "dead": 13
+    }
+  ]
+}
