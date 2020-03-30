@@ -75,7 +75,30 @@ että Helsingin ja Uudenmaan sairaanhoitopiiri on esitetty muodossa HUS.
 vanhat havainnot oletetaan parantuneiksi), niin voit sen itse tehdä - tarjottuun dataan ei tulla tekemään tällaisia laskelmia, vaan siinä ilmoitetaan
 tiedot sellaisina kuin ne on lähteistä saatu ja luotettavaksi arvioitu.
 
+Sairaaladata näyttää tältä ([esimerkki](exampleHospitalData.json)):
 
+```
+{
+  hospitalised: [
+    {
+      "date": "2020-03-25T13:00:00.000Z", // Aikaleima (jolloin tieto lisätty)
+      "area": "HYKS", // Erityisvastuualue, Finland jos koko suomi ja "Other whan HYKS" kun kerran näin oli datassa
+      "totalHospitalised": 63, // Kokonaismäärä sairaalahoidossa, numero
+      "inWard": 45, // Osastolla olevat
+      "inIcu": 18, // Tehohoidossa olevat
+      "dead": 2 // Kuolleiden määrä
+    },
+    .
+    .
+    .
+  ]
+}
+```
+
+Erityisvastuualueiden nimistä käytetään pelkkiä lyhenteitä kuten [täällä](https://www.kuntaliitto.fi/sosiaali-ja-terveysasiat/terveydenhuolto/erikoissairaanhoito).
+
+Tämä data on snapshotteja THL:n julkaisemista kokonaisluvuista, minkä johdosta formaatti on ei ole paras mahdollinen. Seuraamme miten tilanne kehittyy ja parannamme
+jos parempaa vaihtoehtoa ilmaantuu / keksimme miten / ilmoitustapa vakiintuu.
 
 # Dataa on käytetty täällä
 
@@ -139,15 +162,20 @@ HS on käyttänyt ja käyttää dataa ainakin näissä grafiikoissa:
 
 Tämä data on peräisin julkisista lähteistä. HS pyrkii kasaamaan sen mahdollisimman paikkansa pitävänä. Emme takaa, että päivitämme dataa jatkuvasti ja saatamme lopettaa datan päivittämisen ennalta ilmoittamatta, esimerkiksi tartuntatilanteen tai julkisten lähteiden muuttuessa. Saatamme myös muuttaa datarakennetta tai osoitteita ennalta ilmoittamatta.
 
-
 # Direct interface to HS data
 
-The latest data used by HS can be read from https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData
-(yes, a direct address to an AWS Lambda API gateway). `GET` request works.
+The latest observation data used by HS can be read from https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData
+(yes, a direct address to an AWS Lambda API gateway). `GET` request works. Here you can get the published amount of infected, dead and
+recovered by health care district.
+
+From the other available endpoint (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaHospitalData) you can read
+the amount of people in hospital care. This data has been scraped of THL reports.
 
 ## Data format
 
-The API returns JSON, which is structured as follows (the format may change, but good API development practices will be considered
+The APIs return JSON.
+
+The observation data which is structured as follows (the format may change, but good API development practices will be considered
 and field names should remain the same and fields shouldn't be removed for example). Example data [here](exampleData.json).
 All times in UTC.
 
@@ -195,6 +223,31 @@ difference that the health care district of Helsinki and Uusimaa is called HUS.
 
 The list in `recovered` field is very much a best effort attempt at showing the recovered numbers. The topic has been discussed [here](https://github.com/HS-Datadesk/koronavirus-avoindata/issues/12). If you want to try out a formula (for example, counting all confirmed
 cases that are older than two weeks as recovered) feel free to do so. The data offered here will not be subject to such calculations, but will instead provide information as obtained from the sources considered to be reliable.
+
+The hospitalisation data looks like this ([example]((exampleHospitalData.json)))
+
+```
+{
+  hospitalised: [
+    {
+      "date": "2020-03-25T13:00:00.000Z", // Timestamp (when the item was added)
+      "area": "HYKS", // The health care area, Finland if whole Finland and "Other whan HYKS" since a data point like this exists
+      "totalHospitalised": 63, // Total amount of hospitalised people in the area
+      "inWard": 45, // In a regular hospital ward
+      "inIcu": 18, // In intensive care
+      "dead": 2 // Amount of deaths in the area
+    },
+    .
+    .
+    .
+  ]
+}
+```
+
+The areas are abbreviated like [this](https://www.kuntaliitto.fi/sosiaali-ja-terveysasiat/terveydenhuolto/erikoissairaanhoito).
+
+This data is snapshots from THL published reports, which makes the format a little weird. We'll follow how the data format develops and will improve it once we
+have time / figure out how / the way it's reprted stabilises.
 
 # Lisenssi: MIT-lisenssi
 
