@@ -1,0 +1,12 @@
+{
+  "name": "thl_corona_parser",
+  "version": "1.0.0",
+  "description": "Parser the THL corona data",
+  "main": "index.js",
+  "author": "Miro Nurmela",
+  "license": "MIT",
+  "dependencies": {
+    "jsonstat-toolkit": "^1.0.8",
+    "lodash": "^4.17.15"
+  }
+}
