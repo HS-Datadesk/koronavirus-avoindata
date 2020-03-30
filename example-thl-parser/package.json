@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Parser the THL corona data",
   "main": "index.js",
-  "scripts": {
-    "parse": "npm run index.js"
-  },
   "author": "Miro Nurmela",
   "license": "MIT",
   "dependencies": {
