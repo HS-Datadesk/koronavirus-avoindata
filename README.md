@@ -15,12 +15,18 @@ HS avaa datan julkiseksi, jotta muut tiedotusvälineet, kehittäjät ja datavisu
 # Suora rajapinta HS:n dataan (see in English [below](#direct-interface-to-hs-data))
 
 Viimeisimmän HS:n datan voi lukea osoitteesta https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData
-(kyllä, se on suora osoite AWS Lambdan API-gatewayhyn). `GET`-pyynnöllä pääsee.
+(kyllä, se on suora osoite AWS Lambdan API-gatewayhyn). `GET`-pyynnöllä pääsee. Tästä rajapinnasta voit lukea havaintoja
+tartunnan saaneista, kuolleista ja parantuneista. Tieto kerätään eri lähteistä (THL:n raportit, sairaanhoitopiirien raportit)
+
+Toisesta osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaHospitalData) voit lukea
+tietoja sairaalahoidossa olevista. Tämä tieto on talletettu THL:n päivän raporteista.
 
 ## Datan formaatti
 
-Rajapinta palauttaa JSONia, joka näyttää tältä (formaatti voi vaihtua, mutta pyritään seuraamaan hyviä API-suunnittelun periaatteita
-eikä poisteta tai muuteta kenttien nimiä). Esimerkkidataa myös [täällä](exampleData.json). Ajat UTC:ssa.
+Rajapinnat palauttvata JSONia.
+
+Havaintodata joka näyttää tältä (formaatti voi vaihtua, mutta pyritään seuraamaan hyviä API-suunnittelun periaatteita
+eikä poisteta tai muuteta kenttien nimiä). Esimerkkidataa myös [täällä](exampleObservationdata.json). Ajat UTC:ssa.
 
 ```
 {
@@ -68,6 +74,8 @@ että Helsingin ja Uudenmaan sairaanhoitopiiri on esitetty muodossa HUS.
 [täältä](https://github.com/HS-Datadesk/koronavirus-avoindata/issues/12). Jos haluat kokeilla jonkinlaista kaavaa (esimerkiksi yli kaksi viikkoa
 vanhat havainnot oletetaan parantuneiksi), niin voit sen itse tehdä - tarjottuun dataan ei tulla tekemään tällaisia laskelmia, vaan siinä ilmoitetaan
 tiedot sellaisina kuin ne on lähteistä saatu ja luotettavaksi arvioitu.
+
+
 
 # Dataa on käytetty täällä
 
