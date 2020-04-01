@@ -1,8 +1,10 @@
 # IMPORTANT: THL HAS PUBLISHED THEIR DATA
 
 THL has published their own data [here](https://thl.fi/fi/tilastot-ja-data/aineistot-ja-palvelut/avoin-data/varmistetut-koronatapaukset-suomessa-covid-19-).
-I recommend everyone takes a look at that. The future of this API is uncertain - it's not going to vanish without notice, but you should
-look into the actual source of truth. At the moment of writing this they don't have data on deaths and they seem to only update the data every morning 09:30.
+I recommend everyone takes a look at that. These APIs will exists, but there's going to be some delay before we get the observation API back up to date
+(we have to figure out a way to stich the new THL API results into our own so everything doesn't get messed up, since most health care districts have
+stopped reporting now that THL does). I'm personally (quarian) quite busy at the moment with other corona related news things, but will get to this
+as soon as I can.
 
 See the [example-thl-parser](example-thl-parser/index.js) folder for an example how to read the data from the API using a JSONStat library.
 
