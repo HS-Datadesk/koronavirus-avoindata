@@ -36,6 +36,7 @@ Osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnish
 Esimerkki dataa [täällä](exampleObservationDataV2.json)
 
 Suoraan itse käyttämämme THL:n data on luettavissa osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/processedThlData).
+Esimerkkidata [täällä](exampleProcessedThlData.json).
 
 ## Datan formaatti
 
@@ -205,7 +206,7 @@ the amount of people in hospital care. This data has been scraped of THL reports
 For observations, we offer now (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData/v2). It's compatible with the old
 observations endpoint, but uses the THL data as a source. See example data [here](exampleObservationDataV2.json).
 
-Our processed THL data can be read from (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/processedThlData).
+Our processed THL data can be read from (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/processedThlData). Example data [here](exampleProcessedThlData.json).
 
 ## Data format
 
