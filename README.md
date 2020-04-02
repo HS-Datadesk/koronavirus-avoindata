@@ -216,11 +216,20 @@ The observation data which is structured as follows (the format may change, but 
 and field names should remain the same and fields shouldn't be removed for example).
 All times in UTC.
 
+Bot the new and old observation API adhere to the following schema. The difference is that in the new API the deaths are
+split the special health care areas (as per THL). Additionally, the new API doesn't have the information about source
+countries or the infection chains. Those can be still read from the old API.
+
+In the new API the id is formatted as `<health_care_district>_<date>_<nth_observastion_on_date>`. This is due to the 
+fact that the THL data updates with a delay (since the data there is reported according to the testing date, whereas
+the old way was to report when the tests were published and the tests take 2-4 days to update). Sequential number
+doesn't make sense here and this schema should be stable accross THL data updates.
+
 ```
 {
   confirmed: [
     {
-      id: <numeric, sequential id in string format (such as "1")>,
+      id: <numeric, sequential id in string format (such as "1"), or as above>,
       date: <date when this observation was made, ISO 8601 -format>,
       healthCareDistrict: <health care district. null if unknown>,
       infectionSource: <id of the infection source (from this array), "unknown" if unknown and "related to earlier" if we cannot pinpoint the exact source but know it's from known exposure>,
@@ -232,9 +241,10 @@ All times in UTC.
   ],
   deaths: [
     {
-      id: <numeric, sequential id in string format (such as "1")>,
+      id: <numeric, sequential id in string format (such as "1"), or as above>,
       date: <date when this observation was made, ISO 8601 -format>,
       healthCareDistrict: <health care district>,
+      area: <the special health care district in the new API>
     },
     .
     .
