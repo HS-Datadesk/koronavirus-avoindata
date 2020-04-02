@@ -37,7 +37,7 @@ tartunnan saaneista, kuolleista ja parantuneista. Tieto kerätään eri lähteis
 ## Päivittyvät rajapinnat
 
 Osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaHospitalData) voit lukea
-tietoja sairaalahoidossa olevista. Tämä tieto on talletettu THL:n päivän raporteista.
+tietoja sairaalahoidossa olevista. Tämä tieto on talletettu THL:n päivän raporteista. Esimerkkidataa [täällä](exampleObservationdata.json).
 
 Osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData/v2) voit lukea HS:n muokkaaman, aiemman
 `finnishCoronaData`-rajapinnan kanssa yhteensopivan dataobjektin havaistuista tartunnoista. kuolleista ja parantunteista.
@@ -48,7 +48,7 @@ Esimerkki dataa [täällä](exampleObservationDataV2.json)
 Rajapinnat palauttvata JSONia.
 
 Havaintodata joka näyttää tältä (formaatti voi vaihtua, mutta pyritään seuraamaan hyviä API-suunnittelun periaatteita
-eikä poisteta tai muuteta kenttien nimiä). Esimerkkidataa myös [täällä](exampleObservationdata.json). Ajat UTC:ssa.
+eikä poisteta tai muuteta kenttien nimiä). Ajat UTC:ssa.
 
 Sekä uusi että vanha havaintodatarajapinta toteuttavat tämän rajapinnan - sillä erotuksella että uudessa rajapinnassa
 kuolematiedot ovat sairaanhoidon erityisvastuualueiden mukaan jaoteltu, kuten THL:n datassa. Uudessa rajapinnassa ei
