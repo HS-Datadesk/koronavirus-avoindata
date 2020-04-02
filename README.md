@@ -1,16 +1,8 @@
-# IMPORTANT: THL HAS PUBLISHED THEIR DATA
-
-THL has published their own data [here](https://thl.fi/fi/tilastot-ja-data/aineistot-ja-palvelut/avoin-data/varmistetut-koronatapaukset-suomessa-covid-19-).
-I recommend everyone takes a look at that. These APIs will exists, but there's going to be some delay before we get the observation API back up to date
-(we have to figure out a way to stich the new THL API results into our own so everything doesn't get messed up, since most health care districts have
-stopped reporting now that THL does). I'm personally (quarian) quite busy at the moment with other corona related news things, but will get to this
-as soon as I can.
-
-See the [example-thl-parser](example-thl-parser/index.js) folder for an example how to read the data from the API using a JSONStat library.
-
 # Suomen koronavirus-tartuntatilanne avoimena datana
 
-Helsingin Sanomat julkaisee Suomen koronavirus-tartunnat ja niiden tiedossa olevat lähteet avoimena datana. HS on kerännyt aineiston julkisista lähteistä: tiedotustilaisuuksista, mediasta ja haastatteluista. Dataa päivitetään sitä mukaa kun uusia tietoja tulee. 
+Helsingin Sanomat julkaisee Suomen koronavirus-tartunnat ja niiden tiedossa olevat lähteet avoimena datana. HS on kerännyt aineiston julkisista lähteistä: tiedotustilaisuuksista, mediasta ja haastatteluista. Tällä hetkellä datan päälähde on THL:n [tartuntatietorekisteri]((https://thl.fi/fi/tilastot-ja-data/aineistot-ja-palvelut/avoin-data/varmistetut-koronatapaukset-suomessa-covid-19-)) tartuntojen osalta, ja sairaanhoitopiirien osalta HS:n oma datan keräys.
+
+Jos THL:n rajapinnan käyttö kiinnostaa, kannattaa katsoa `example-thl-parser`-kansioon.
 
 Dataa saa käyttää vapaasti niin kaupallisiin kuin yksityisiin tarpeisiin. Toivomme, että data tallennetaan paikallisesti tai välimuistitetaan, mikäli se on tarkoitus julkaista laajalle yleisölle.
 
