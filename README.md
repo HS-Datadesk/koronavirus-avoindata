@@ -16,14 +16,32 @@ Dataa saa käyttää vapaasti niin kaupallisiin kuin yksityisiin tarpeisiin. Toi
 
 HS avaa datan julkiseksi, jotta muut tiedotusvälineet, kehittäjät ja datavisualistit pystyisivät paremmin hahmottamaan koronaviruksen leviämistä Suomessa. Toiveena on, että yleisön tietoisuus viruksesta paranisi ja mahdollisuudet suojautua tartunnoilta sekä arvioida tartunnan riskejä perustuisivat mahdollisimman tarkkaan aineistoon.
 
+## Rajapinnan eri versiot
+
+THL on julkaissut omat datansa avoimena [täällä](https://thl.fi/fi/tilastot-ja-data/aineistot-ja-palvelut/avoin-data/varmistetut-koronatapaukset-suomessa-covid-19-).
+Datan julkaisun seurauksena suurin osa sairaanhoitpiireistä ei enää julkaise omia lukujaan, minkä johdosta HS:n aloittama tiedonkeruu ei enää kannata. Lisäksi THL:n
+rajapinnassa havainnot esitetään testauspäivän perusteella, kun HS:n alun perin keräämässä datassa havainnot olivat ilmoituspäivän mukaan.
+
+Tämän johdosta HS:n data HS:n ensimmäisen rajapinnan takan ei enää päivity - sen synkronointi eri tavalla ilmoitetun datan kanssa ei käy järkeen. HS tarjoaa
+yhteensopivan rajapinnan THL:n datan päälle vanhan rajapinnan korvaajaksi. Lisäksi HS tarjoaa oman versionsa THL:n tartuntadatasta ja keräämänsä tiedot
+sairaalahoidossa olevista.
+
 # Suora rajapinta HS:n dataan (see in English [below](#direct-interface-to-hs-data))
 
-Viimeisimmän HS:n datan voi lukea osoitteesta https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData
-(kyllä, se on suora osoite AWS Lambdan API-gatewayhyn). `GET`-pyynnöllä pääsee. Tästä rajapinnasta voit lukea havaintoja
-tartunnan saaneista, kuolleista ja parantuneista. Tieto kerätään eri lähteistä (THL:n raportit, sairaanhoitopiirien raportit)
+## Ei-päivittyvät rajapinnat
 
-Toisesta osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaHospitalData) voit lukea
+Viimeisimmän HS:n alun perin datan voi lukea osoitteesta https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData
+(kyllä, se on suora osoite AWS Lambdan API-gatewayhyn). `GET`-pyynnöllä pääsee. Tästä rajapinnasta voit lukea havaintoja
+tartunnan saaneista, kuolleista ja parantuneista. Tieto kerätään eri lähteistä (THL:n raportit, sairaanhoitopiirien raportit).
+
+## Päivittyvät rajapinnat
+
+Osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaHospitalData) voit lukea
 tietoja sairaalahoidossa olevista. Tämä tieto on talletettu THL:n päivän raporteista.
+
+Osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData/v2) voit lukea HS:n muokkaaman, aiemman
+`finnishCoronaData`-rajapinnan kanssa yhteensopivan dataobjektin havaistuista tartunnoista. kuolleista ja parantunteista.
+Esimerkki dataa [täällä](exampleObservationDataV2.json)
 
 ## Datan formaatti
 
@@ -32,11 +50,19 @@ Rajapinnat palauttvata JSONia.
 Havaintodata joka näyttää tältä (formaatti voi vaihtua, mutta pyritään seuraamaan hyviä API-suunnittelun periaatteita
 eikä poisteta tai muuteta kenttien nimiä). Esimerkkidataa myös [täällä](exampleObservationdata.json). Ajat UTC:ssa.
 
+Sekä uusi että vanha havaintodatarajapinta toteuttavat tämän rajapinnan - sillä erotuksella että uudessa rajapinnassa
+kuolematiedot ovat sairaanhoidon erityisvastuualueiden mukaan jaoteltu, kuten THL:n datassa. Uudessa rajapinnassa ei
+myöskään ole saatavilla tietoa tartuntamaista tai tartuntaketjuista - niitä varten kannattaa katsoa vanhaa rajapintaa.
+
+Uudessa rajapinassa id on muotoiltu muotoon `<sairaanhoitopiiri>_<havainnon_päivämäärä>_<monesko_havainto_päivässä>`.
+Syy siihen on se, että THL:n data päivittyy takautuvasti (testien valmistuminen kestää 2-4 päivää), joten juoksevan
+numeroinnin käyttö ei käy järkeen. Tämän id:n pitäisi olla vakaa THL:n datojen päivitysten yli.
+
 ```
 {
   confirmed: [
     {
-      id: <numeerinen id merkkijonomuodossa (kuten "1"), juokseva numerointi>,
+      id: <numeerinen id merkkijonomuodossa (kuten "1"), juokseva numerointi, tai kuten yllä kuvattu>,
       date: <havainnon aika ISO 8601 -formaatissa>,
       healthCareDistrict: <sairaanhoitopiiri. null jos ei tiedossa>,
       infectionSource: <tartunnan lähteen id (eli tästä listasta), "unknown" jos ei tiedetä ja "related to earlier" jos tarkkaa lähdettä ei tiedetä mutta tiedetään että liittyy johonkin aiempaan tapaukseen>,
@@ -48,9 +74,10 @@ eikä poisteta tai muuteta kenttien nimiä). Esimerkkidataa myös [täällä](ex
   ],
   deaths: [
     {
-      id: <numeerinen id merkkijonomuodossa (kuten "1"), juokseva numerointi>,
+      id: <numeerinen id merkkijonomuodossa (kuten "1"), juokseva numerointi, tai kuten yllä kuvattu>,
       date: <havainnon aika ISO 8601 -formaatissa>,
       healthCareDistrict: <sairaanhoitopiiri>,
+      area: <erityissairaanhoitopiiri uudessa rajapinnassa, vanhas>
     },
     .
     .
