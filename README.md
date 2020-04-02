@@ -1,42 +1,63 @@
-# IMPORTANT: THL HAS PUBLISHED THEIR DATA
-
-THL has published their own data [here](https://thl.fi/fi/tilastot-ja-data/aineistot-ja-palvelut/avoin-data/varmistetut-koronatapaukset-suomessa-covid-19-).
-I recommend everyone takes a look at that. These APIs will exists, but there's going to be some delay before we get the observation API back up to date
-(we have to figure out a way to stich the new THL API results into our own so everything doesn't get messed up, since most health care districts have
-stopped reporting now that THL does). I'm personally (quarian) quite busy at the moment with other corona related news things, but will get to this
-as soon as I can.
-
-See the [example-thl-parser](example-thl-parser/index.js) folder for an example how to read the data from the API using a JSONStat library.
-
 # Suomen koronavirus-tartuntatilanne avoimena datana
 
-Helsingin Sanomat julkaisee Suomen koronavirus-tartunnat ja niiden tiedossa olevat lähteet avoimena datana. HS on kerännyt aineiston julkisista lähteistä: tiedotustilaisuuksista, mediasta ja haastatteluista. Dataa päivitetään sitä mukaa kun uusia tietoja tulee. 
+Helsingin Sanomat julkaisee Suomen koronavirus-tartunnat ja niiden tiedossa olevat lähteet avoimena datana. HS on kerännyt aineiston julkisista lähteistä: tiedotustilaisuuksista, mediasta ja haastatteluista. Tällä hetkellä datan päälähde on THL:n [tartuntatietorekisteri]((https://thl.fi/fi/tilastot-ja-data/aineistot-ja-palvelut/avoin-data/varmistetut-koronatapaukset-suomessa-covid-19-)) tartuntojen osalta, ja sairaanhoitopiirien osalta HS:n oma datan keräys.
+
+Jos THL:n rajapinnan käyttö kiinnostaa, kannattaa katsoa `example-thl-parser`-kansioon.
 
 Dataa saa käyttää vapaasti niin kaupallisiin kuin yksityisiin tarpeisiin. Toivomme, että data tallennetaan paikallisesti tai välimuistitetaan, mikäli se on tarkoitus julkaista laajalle yleisölle.
 
 HS avaa datan julkiseksi, jotta muut tiedotusvälineet, kehittäjät ja datavisualistit pystyisivät paremmin hahmottamaan koronaviruksen leviämistä Suomessa. Toiveena on, että yleisön tietoisuus viruksesta paranisi ja mahdollisuudet suojautua tartunnoilta sekä arvioida tartunnan riskejä perustuisivat mahdollisimman tarkkaan aineistoon.
 
+## Rajapinnan eri versiot
+
+THL on julkaissut omat datansa avoimena [täällä](https://thl.fi/fi/tilastot-ja-data/aineistot-ja-palvelut/avoin-data/varmistetut-koronatapaukset-suomessa-covid-19-).
+Datan julkaisun seurauksena suurin osa sairaanhoitpiireistä ei enää julkaise omia lukujaan, minkä johdosta HS:n aloittama tiedonkeruu ei enää kannata. Lisäksi THL:n
+rajapinnassa havainnot esitetään testauspäivän perusteella, kun HS:n alun perin keräämässä datassa havainnot olivat ilmoituspäivän mukaan.
+
+Tämän johdosta HS:n data HS:n ensimmäisen rajapinnan takan ei enää päivity - sen synkronointi eri tavalla ilmoitetun datan kanssa ei käy järkeen. HS tarjoaa
+yhteensopivan rajapinnan THL:n datan päälle vanhan rajapinnan korvaajaksi. Lisäksi HS tarjoaa oman versionsa THL:n tartuntadatasta ja keräämänsä tiedot
+sairaalahoidossa olevista.
+
 # Suora rajapinta HS:n dataan (see in English [below](#direct-interface-to-hs-data))
 
-Viimeisimmän HS:n datan voi lukea osoitteesta https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData
-(kyllä, se on suora osoite AWS Lambdan API-gatewayhyn). `GET`-pyynnöllä pääsee. Tästä rajapinnasta voit lukea havaintoja
-tartunnan saaneista, kuolleista ja parantuneista. Tieto kerätään eri lähteistä (THL:n raportit, sairaanhoitopiirien raportit)
+## Ei-päivittyvät rajapinnat
 
-Toisesta osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaHospitalData) voit lukea
-tietoja sairaalahoidossa olevista. Tämä tieto on talletettu THL:n päivän raporteista.
+Viimeisimmän HS:n alun perin datan voi lukea osoitteesta https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData
+(kyllä, se on suora osoite AWS Lambdan API-gatewayhyn). `GET`-pyynnöllä pääsee. Tästä rajapinnasta voit lukea havaintoja
+tartunnan saaneista, kuolleista ja parantuneista. Tieto kerätään eri lähteistä (THL:n raportit, sairaanhoitopiirien raportit).
+
+## Päivittyvät rajapinnat
+
+Osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaHospitalData) voit lukea
+tietoja sairaalahoidossa olevista. Tämä tieto on talletettu THL:n päivän raporteista. Esimerkkidataa [täällä](exampleObservationdata.json).
+
+Osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData/v2) voit lukea HS:n muokkaaman, aiemman
+`finnishCoronaData`-rajapinnan kanssa yhteensopivan dataobjektin havaistuista tartunnoista. kuolleista ja parantunteista.
+Esimerkki dataa [täällä](exampleObservationDataV2.json)
+
+Suoraan itse käyttämämme THL:n data on luettavissa osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/processedThlData).
+Esimerkkidata [täällä](exampleProcessedThlData.json).
 
 ## Datan formaatti
 
 Rajapinnat palauttvata JSONia.
 
 Havaintodata joka näyttää tältä (formaatti voi vaihtua, mutta pyritään seuraamaan hyviä API-suunnittelun periaatteita
-eikä poisteta tai muuteta kenttien nimiä). Esimerkkidataa myös [täällä](exampleObservationdata.json). Ajat UTC:ssa.
+eikä poisteta tai muuteta kenttien nimiä). Ajat UTC:ssa.
+
+Sekä uusi että vanha havaintodatarajapinta toteuttavat tämän rajapinnan - sillä erotuksella että uudessa rajapinnassa
+kuolematiedot ovat sairaanhoidon erityisvastuualueiden mukaan jaoteltu, kuten THL:n datassa. Uudessa rajapinnassa ei
+myöskään ole saatavilla tietoa tartuntamaista tai tartuntaketjuista - niitä varten kannattaa katsoa vanhaa rajapintaa.
+
+Uudessa rajapinassa id on muotoiltu muotoon `<sairaanhoitopiiri>_<havainnon_päivämäärä>_<monesko_havainto_päivässä>`.
+Syy siihen on se, että THL:n data päivittyy takautuvasti (testien valmistuminen kestää 2-4 päivää), joten juoksevan
+numeroinnin käyttö ei käy järkeen. Tämän id:n pitäisi olla vakaa THL:n datojen päivitysten yli.
 
 ```
 {
   confirmed: [
     {
-      id: <numeerinen id merkkijonomuodossa (kuten "1"), juokseva numerointi>,
+      id: <numeerinen id merkkijonomuodossa (kuten "1"), juokseva numerointi, tai kuten yllä kuvattu>,
       date: <havainnon aika ISO 8601 -formaatissa>,
       healthCareDistrict: <sairaanhoitopiiri. null jos ei tiedossa>,
       infectionSource: <tartunnan lähteen id (eli tästä listasta), "unknown" jos ei tiedetä ja "related to earlier" jos tarkkaa lähdettä ei tiedetä mutta tiedetään että liittyy johonkin aiempaan tapaukseen>,
@@ -48,9 +69,10 @@ eikä poisteta tai muuteta kenttien nimiä). Esimerkkidataa myös [täällä](ex
   ],
   deaths: [
     {
-      id: <numeerinen id merkkijonomuodossa (kuten "1"), juokseva numerointi>,
+      id: <numeerinen id merkkijonomuodossa (kuten "1"), juokseva numerointi, tai kuten yllä kuvattu>,
       date: <havainnon aika ISO 8601 -formaatissa>,
       healthCareDistrict: <sairaanhoitopiiri>,
+      area: <erityissairaanhoitopiiri uudessa rajapinnassa, vanhas>
     },
     .
     .
@@ -103,6 +125,9 @@ Erityisvastuualueiden nimistä käytetään pelkkiä lyhenteitä kuten [tääll�
 
 Tämä data on snapshotteja THL:n julkaisemista kokonaisluvuista, minkä johdosta formaatti on ei ole paras mahdollinen. Seuraamme miten tilanne kehittyy ja parannamme
 jos parempaa vaihtoehtoa ilmaantuu / keksimme miten / ilmoitustapa vakiintuu.
+
+Prosessoidusta THL-datasta saa parhaan kuvan [esimerkkidatasta](exampleProcessedThlData.json). `value`-kenttä kertoo, kuinka monta tartuntatapausta testien perusteella
+on havaittu päivänä.
 
 # Dataa on käytetty täällä
 
@@ -168,26 +193,46 @@ Tämä data on peräisin julkisista lähteistä. HS pyrkii kasaamaan sen mahdoll
 
 # Direct interface to HS data
 
-The latest observation data used by HS can be read from https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData
-(yes, a direct address to an AWS Lambda API gateway). `GET` request works. Here you can get the published amount of infected, dead and
-recovered by health care district.
+## Non-updateing interfaces
 
-From the other available endpoint (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaHospitalData) you can read
-the amount of people in hospital care. This data has been scraped of THL reports.
+The old style (HS gathered) latest observation data used by HS can be read from https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData
+(yes, a direct address to an AWS Lambda API gateway). `GET` request works. Here you can get the published amount of infected, dead and
+recovered by health care district. Reason this is not updated is that THL is publishing their own data, it's reporter differently from the past times
+and data collection from the health care districts doesn't work too well anymore since THL is publishing their data and the districts don't anymore (
+which makes total sense).
+
+## Updating interfaces
+
+From the endpoint (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaHospitalData) you can read
+the amount of people in hospital care. This data has been scraped of THL reports. Example data [here](exampleData.json).
+
+For observations, we offer now (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData/v2). It's compatible with the old
+observations endpoint, but uses the THL data as a source. See example data [here](exampleObservationDataV2.json).
+
+Our processed THL data can be read from (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/processedThlData). Example data [here](exampleProcessedThlData.json).
 
 ## Data format
 
 The APIs return JSON.
 
 The observation data which is structured as follows (the format may change, but good API development practices will be considered
-and field names should remain the same and fields shouldn't be removed for example). Example data [here](exampleData.json).
+and field names should remain the same and fields shouldn't be removed for example).
 All times in UTC.
+
+Bot the new and old observation API adhere to the following schema. The difference is that in the new API the deaths are
+split the special health care areas (as per THL). Additionally, the new API doesn't have the information about source
+countries or the infection chains. Those can be still read from the old API.
+
+In the new API the id is formatted as `<health_care_district>_<date>_<nth_observastion_on_date>`. This is due to the 
+fact that the THL data updates with a delay (since the data there is reported according to the testing date, whereas
+the old way was to report when the tests were published and the tests take 2-4 days to update). Sequential number
+doesn't make sense here and this schema should be stable accross THL data updates.
 
 ```
 {
   confirmed: [
     {
-      id: <numeric, sequential id in string format (such as "1")>,
+      id: <numeric, sequential id in string format (such as "1"), or as above>,
       date: <date when this observation was made, ISO 8601 -format>,
       healthCareDistrict: <health care district. null if unknown>,
       infectionSource: <id of the infection source (from this array), "unknown" if unknown and "related to earlier" if we cannot pinpoint the exact source but know it's from known exposure>,
@@ -199,9 +244,10 @@ All times in UTC.
   ],
   deaths: [
     {
-      id: <numeric, sequential id in string format (such as "1")>,
+      id: <numeric, sequential id in string format (such as "1"), or as above>,
       date: <date when this observation was made, ISO 8601 -format>,
       healthCareDistrict: <health care district>,
+      area: <the special health care district in the new API>
     },
     .
     .
@@ -252,6 +298,8 @@ The areas are abbreviated like [this](https://www.kuntaliitto.fi/sosiaali-ja-ter
 
 This data is snapshots from THL published reports, which makes the format a little weird. We'll follow how the data format develops and will improve it once we
 have time / figure out how / the way it's reprted stabilises.
+
+Best idea about the processed THL data is in [the example data](exampleProcessedThlData.json). `value` field tells how many infections were found in tests on that date.
 
 # Lisenssi: MIT-lisenssi
 
