@@ -126,6 +126,9 @@ Erityisvastuualueiden nimistä käytetään pelkkiä lyhenteitä kuten [tääll�
 Tämä data on snapshotteja THL:n julkaisemista kokonaisluvuista, minkä johdosta formaatti on ei ole paras mahdollinen. Seuraamme miten tilanne kehittyy ja parannamme
 jos parempaa vaihtoehtoa ilmaantuu / keksimme miten / ilmoitustapa vakiintuu.
 
+Prosessoidusta THL-datasta saa parhaan kuvan [esimerkkidatasta](exampleProcessedThlData.json). `value`-kenttä kertoo, kuinka monta tartuntatapausta testien perusteella
+on havaittu päivänä.
+
 # Dataa on käytetty täällä
 
 ## HS:n grafiikat
@@ -295,6 +298,8 @@ The areas are abbreviated like [this](https://www.kuntaliitto.fi/sosiaali-ja-ter
 
 This data is snapshots from THL published reports, which makes the format a little weird. We'll follow how the data format develops and will improve it once we
 have time / figure out how / the way it's reprted stabilises.
+
+Best idea about the processed THL data is in [the example data](exampleProcessedThlData.json). `value` field tells how many infections were found in tests on that date.
 
 # Lisenssi: MIT-lisenssi
 
