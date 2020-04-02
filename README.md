@@ -35,6 +35,8 @@ Osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnish
 `finnishCoronaData`-rajapinnan kanssa yhteensopivan dataobjektin havaistuista tartunnoista. kuolleista ja parantunteista.
 Esimerkki dataa [täällä](exampleObservationDataV2.json)
 
+Suoraan itse käyttämämme THL:n data on luettavissa osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/processedThlData).
+
 ## Datan formaatti
 
 Rajapinnat palauttvata JSONia.
@@ -187,19 +189,30 @@ Tämä data on peräisin julkisista lähteistä. HS pyrkii kasaamaan sen mahdoll
 
 # Direct interface to HS data
 
-The latest observation data used by HS can be read from https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData
-(yes, a direct address to an AWS Lambda API gateway). `GET` request works. Here you can get the published amount of infected, dead and
-recovered by health care district.
+## Non-updateing interfaces
 
-From the other available endpoint (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaHospitalData) you can read
-the amount of people in hospital care. This data has been scraped of THL reports.
+The old style (HS gathered) latest observation data used by HS can be read from https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData
+(yes, a direct address to an AWS Lambda API gateway). `GET` request works. Here you can get the published amount of infected, dead and
+recovered by health care district. Reason this is not updated is that THL is publishing their own data, it's reporter differently from the past times
+and data collection from the health care districts doesn't work too well anymore since THL is publishing their data and the districts don't anymore (
+which makes total sense).
+
+## Updating interfaces
+
+From the endpoint (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaHospitalData) you can read
+the amount of people in hospital care. This data has been scraped of THL reports. Example data [here](exampleData.json).
+
+For observations, we offer now (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData/v2). It's compatible with the old
+observations endpoint, but uses the THL data as a source. See example data [here](exampleObservationDataV2.json).
+
+Our processed THL data can be read from (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/processedThlData).
 
 ## Data format
 
 The APIs return JSON.
 
 The observation data which is structured as follows (the format may change, but good API development practices will be considered
-and field names should remain the same and fields shouldn't be removed for example). Example data [here](exampleData.json).
+and field names should remain the same and fields shouldn't be removed for example).
 All times in UTC.
 
 ```
