@@ -29,7 +29,7 @@ tartunnan saaneista, kuolleista ja parantuneista. Tieto kerätään eri lähteis
 ## Päivittyvät rajapinnat
 
 Osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaHospitalData) voit lukea
-tietoja sairaalahoidossa olevista. Tämä tieto on talletettu THL:n päivän raporteista. Esimerkkidataa [täällä](exampleObservationdata.json).
+tietoja sairaalahoidossa olevista. Tämä tieto on talletettu THL:n päivän raporteista. Esimerkkidataa [täällä](exampleObservationData.json).
 
 Osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData/v2) voit lukea HS:n muokkaaman, aiemman
 `finnishCoronaData`-rajapinnan kanssa yhteensopivan dataobjektin havaistuista tartunnoista. kuolleista ja parantunteista.
@@ -204,7 +204,7 @@ which makes total sense).
 ## Updating interfaces
 
 From the endpoint (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaHospitalData) you can read
-the amount of people in hospital care. This data has been scraped of THL reports. Example data [here](exampleData.json).
+the amount of people in hospital care. This data has been scraped of THL reports. Example data [here](exampleObservationData.json).
 
 For observations, we offer now (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData/v2). It's compatible with the old
 observations endpoint, but uses the THL data as a source. See example data [here](exampleObservationDataV2.json).
