@@ -186,6 +186,7 @@ HS on käyttänyt ja käyttää dataa ainakin näissä grafiikoissa:
 
 [COVID19 Bot a.k.a Corona-chan - Discord Botti](https://github.com/Tatatofly/COVID19-Bot) ([Tatatofly](https://github.com/Tatatofly))
 
+[Covid-19 forecaster](https://www.datarion.fi/corona/) ([Datarion](https://www.datarion.fi/))
 
 # Huomautus
 
