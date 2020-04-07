@@ -188,6 +188,8 @@ HS on käyttänyt ja käyttää dataa ainakin näissä grafiikoissa:
 
 [Covid-19 forecaster](https://www.datarion.fi/corona/) ([Datarion](https://www.datarion.fi/))
 
+[CovidJSON Data](https://data.covidjson.org/) ([Ilkka Rinne](https://github.com/ilkkarinne))
+
 # Huomautus
 
 Tämä data on peräisin julkisista lähteistä. HS pyrkii kasaamaan sen mahdollisimman paikkansa pitävänä. Emme takaa, että päivitämme dataa jatkuvasti ja saatamme lopettaa datan päivittämisen ennalta ilmoittamatta, esimerkiksi tartuntatilanteen tai julkisten lähteiden muuttuessa. Saatamme myös muuttaa datarakennetta tai osoitteita ennalta ilmoittamatta.
