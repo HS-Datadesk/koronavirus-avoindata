@@ -192,6 +192,8 @@ HS on käyttänyt ja käyttää dataa ainakin näissä grafiikoissa:
 
 [Finland Corona Stat updates](https://finlandcoronastats.com/) ([source](https://github.com/Boochoo/finland-conora-stats)) ([Ermias Hailemicheal](https://www.linkedin.com/in/ermi/))
 
+[COVID-19 Stats Finland mobile app](https://github.com/secretwpn/covid_stats_finland) ([secretwpn](https://github.com/secretwpn))
+
 # Huomautus
 
 Tämä data on peräisin julkisista lähteistä. HS pyrkii kasaamaan sen mahdollisimman paikkansa pitävänä. Emme takaa, että päivitämme dataa jatkuvasti ja saatamme lopettaa datan päivittämisen ennalta ilmoittamatta, esimerkiksi tartuntatilanteen tai julkisten lähteiden muuttuessa. Saatamme myös muuttaa datarakennetta tai osoitteita ennalta ilmoittamatta.
