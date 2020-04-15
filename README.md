@@ -38,6 +38,9 @@ Esimerkki dataa [täällä](exampleObservationDataV2.json)
 Suoraan itse käyttämämme THL:n data on luettavissa osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/processedThlData).
 Esimerkkidata [täällä](exampleProcessedThlData.json).
 
+Testaukseen liittyvää dataa on tarjolla Suomen tasolla aikasarjana (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/thlTestData)
+ja viimeisin tieto sairaanhoitopiireittäin (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/hcdTestData).
+
 ## Datan formaatti
 
 Rajapinnat palauttvata JSONia.
@@ -210,6 +213,9 @@ For observations, we offer now (https://w3qa5ydb4l.execute-api.eu-west-1.amazona
 observations endpoint, but uses the THL data as a source. See example data [here](exampleObservationDataV2.json).
 
 Our processed THL data can be read from (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/processedThlData). Example data [here](exampleProcessedThlData.json).
+
+Testing related data is offered for Finland level in a timeseries (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/thlTestData)
+and the latest information on health carea area level (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/hcdTestData).
 
 ## Data format
 
