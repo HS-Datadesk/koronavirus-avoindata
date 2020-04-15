@@ -132,6 +132,9 @@ jos parempaa vaihtoehtoa ilmaantuu / keksimme miten / ilmoitustapa vakiintuu.
 Prosessoidusta THL-datasta saa parhaan kuvan [esimerkkidatasta](exampleProcessedThlData.json). `value`-kenttä kertoo, kuinka monta tartuntatapausta testien perusteella
 on havaittu päivänä.
 
+Testidatan esimerkit ovat [täällä Suomen aikasarjasta](exampleFinlandTimeseriesTestData.json) ja
+[täällä viimeisimmästä sairaanhoitopiirin tiedosta](latestHcdTestData.json).
+
 # Dataa on käytetty täällä
 
 ## HS:n grafiikat
@@ -306,6 +309,9 @@ This data is snapshots from THL published reports, which makes the format a litt
 have time / figure out how / the way it's reprted stabilises.
 
 Best idea about the processed THL data is in [the example data](exampleProcessedThlData.json). `value` field tells how many infections were found in tests on that date.
+
+Test data examples are [here for Finnish timeseries test data](exampleFinlandTimeseriesTestData.json) and
+[here for the latest health care district test data](latestHcdTestData.json).
 
 # Lisenssi: MIT-lisenssi
 
