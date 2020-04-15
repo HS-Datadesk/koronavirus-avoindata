@@ -1,0 +1,112 @@
+{
+  "Ahvenanmaa": {
+    "tested": 260,
+    "population": 29962,
+    "infected": 10
+  },
+  "Varsinais-Suomi": {
+    "tested": 3409,
+    "population": 483857,
+    "infected": 185
+  },
+  "Satakunta": {
+    "tested": 834,
+    "population": 216670,
+    "infected": 42
+  },
+  "Kanta-Häme": {
+    "tested": 770,
+    "population": 171278,
+    "infected": 59
+  },
+  "Pirkanmaa": {
+    "tested": 5587,
+    "population": 538651,
+    "infected": 181
+  },
+  "Päijät-Häme": {
+    "tested": 1417,
+    "population": 210329,
+    "infected": 53
+  },
+  "Kymenlaakso": {
+    "tested": 946,
+    "population": 164670,
+    "infected": 30
+  },
+  "Etelä-Karjala": {
+    "tested": 632,
+    "population": 127566,
+    "infected": 15
+  },
+  "Etelä-Savo": {
+    "tested": 616,
+    "population": 98743,
+    "infected": 40
+  },
+  "Itä-Savo": {
+    "tested": 195,
+    "population": 40323,
+    "infected": 9
+  },
+  "Pohjois-Karjala": {
+    "tested": 762,
+    "population": 164318,
+    "infected": 18
+  },
+  "Pohjois-Savo": {
+    "tested": 1723,
+    "population": 244417,
+    "infected": 100
+  },
+  "Keski-Suomi": {
+    "tested": 932,
+    "population": 252766,
+    "infected": 106
+  },
+  "Etelä-Pohjanmaa": {
+    "tested": 613,
+    "population": 193212,
+    "infected": 32
+  },
+  "Vaasa": {
+    "tested": 758,
+    "population": 169516,
+    "infected": 38
+  },
+  "Keski-Pohjanmaa": {
+    "tested": 412,
+    "population": 77397,
+    "infected": 13
+  },
+  "Pohjois-Pohjanmaa": {
+    "tested": 3308,
+    "population": 410510,
+    "infected": 106
+  },
+  "Kainuu": {
+    "tested": 247,
+    "population": 72215,
+    "infected": 42
+  },
+  "Länsi-Pohja": {
+    "tested": 468,
+    "population": 60338,
+    "infected": 58
+  },
+  "Lappi": {
+    "tested": 1359,
+    "population": 117113,
+    "infected": 62
+  },
+  "HUS": {
+    "tested": 23610,
+    "population": 1700904,
+    "infected": 2038
+  },
+  "Kaikki sairaanhoitopiirit": {
+    "tested": 48858,
+    "population": 5544755,
+    "infected": 3237
+  }
+}
