@@ -43,7 +43,7 @@ ja viimeisin tieto sairaanhoitopiireittäin (https://w3qa5ydb4l.execute-api.eu-w
 
 ## Datan formaatti
 
-Rajapinnat palauttvata JSONia.
+Rajapinnat palauttavat JSONia.
 
 Havaintodata joka näyttää tältä (formaatti voi vaihtua, mutta pyritään seuraamaan hyviä API-suunnittelun periaatteita
 eikä poisteta tai muuteta kenttien nimiä). Ajat UTC:ssa.
