@@ -148,6 +148,8 @@ HS on käyttänyt ja käyttää dataa ainakin näissä grafiikoissa:
 
 (Tee pull request jos haluat omasi tänne.)
 
+[Corosim](https://corosim.fi/) ([Futurice](https://www.futurice.com))
+
 [Corona Monitor](https://github.com/Matsuuu/finnish-corona-statistics) ([Matsuuu](https://github.com/Matsuuu))
 
 [Sairaanhoitopiirit kartalla](https://github.com/VuokkoH/koronavirus-avoindata) ([VuokkoH](https://github.com/VuokkoH))
