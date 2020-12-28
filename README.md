@@ -35,6 +35,12 @@ Osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnish
 `finnishCoronaData`-rajapinnan kanssa yhteensopivan dataobjektin havaistuista tartunnoista. kuolleista ja parantunteista.
 Esimerkki dataa [täällä](exampleObservationDataV2.json)
 
+**Päivitys 28.12.2020**
+
+Ylläoleva v2-osoite on päivitetty poistamalla siitä `infectionSource` ja `infectionSourceCountry` -kentät. Muutos tehtiin, jotta rajapinnan
+vastaukset mahtuisivat AWS-lambdan rajoihin. Suosittelemme siirtymään käyttämään yllä olevaa osoitetta sairaaladataan ja alla olevaa THL:n
+tartuntadataan.
+
 Suoraan itse käyttämämme THL:n data on luettavissa osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/processedThlData).
 Esimerkkidata [täällä](exampleProcessedThlData.json).
 
@@ -229,6 +235,12 @@ the amount of people in hospital care. This data has been scraped of THL reports
 
 For observations, we offer now (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData/v2). It's compatible with the old
 observations endpoint, but uses the THL data as a source. See example data [here](exampleObservationDataV2.json).
+
+**Update 28.12.2020**
+
+In the v2 endpoint above we have now removed the `infectionSource` and `infectionSourceCountry` fields. This was done in order to get the
+HTTP response to fit the AWS lambda limits. We strongly suggest to migrating to the separate hospital data endpoint above and the processed
+THL data below.
 
 Our processed THL data can be read from (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/processedThlData). Example data [here](exampleProcessedThlData.json).
 
