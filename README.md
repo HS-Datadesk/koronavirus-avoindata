@@ -1,6 +1,6 @@
 # Suomen koronavirus-tartuntatilanne avoimena datana
 
-Helsingin Sanomat julkaisee Suomen koronavirus-tartunnat ja niiden tiedossa olevat lähteet avoimena datana. HS on kerännyt aineiston julkisista lähteistä: tiedotustilaisuuksista, mediasta ja haastatteluista. Tällä hetkellä datan päälähde on THL:n [tartuntatietorekisteri]((https://thl.fi/fi/tilastot-ja-data/aineistot-ja-palvelut/avoin-data/varmistetut-koronatapaukset-suomessa-covid-19-)) tartuntojen osalta, ja sairaanhoitopiirien osalta HS:n oma datan keräys.
+Helsingin Sanomat julkaisee Suomen koronavirus-tartunnat ja niiden tiedossa olevat lähteet avoimena datana. HS on kerännyt aineiston julkisista lähteistä: tiedotustilaisuuksista, mediasta ja haastatteluista. Tällä hetkellä datan päälähde on THL:n [tartuntatietorekisteri]((https://thl.fi/fi/tilastot-ja-data/aineistot-ja-palvelut/avoin-data/varmistetut-koronatapaukset-suomessa-covid-19-)) tartuntojen osalta, ja sairaanhoitopiirien, kuolemien sekä rokotusten osalta osalta HS:n oma datan keräys.
 
 Jos THL:n rajapinnan käyttö kiinnostaa, kannattaa katsoa `example-thl-parser`-kansioon.
 
@@ -11,7 +11,7 @@ HS avaa datan julkiseksi, jotta muut tiedotusvälineet, kehittäjät ja datavisu
 ## Rajapinnan eri versiot
 
 THL on julkaissut omat datansa avoimena [täällä](https://thl.fi/fi/tilastot-ja-data/aineistot-ja-palvelut/avoin-data/varmistetut-koronatapaukset-suomessa-covid-19-).
-Datan julkaisun seurauksena suurin osa sairaanhoitpiireistä ei enää julkaise omia lukujaan, minkä johdosta HS:n aloittama tiedonkeruu ei enää kannata. Lisäksi THL:n
+Datan julkaisun seurauksena suurin osa sairaanhoitopiireistä ei enää julkaise omia lukujaan, minkä johdosta HS:n aloittama tiedonkeruu ei enää kannata. Lisäksi THL:n
 rajapinnassa havainnot esitetään testauspäivän perusteella, kun HS:n alun perin keräämässä datassa havainnot olivat ilmoituspäivän mukaan.
 
 Tämän johdosta HS:n data HS:n ensimmäisen rajapinnan takan ei enää päivity - sen synkronointi eri tavalla ilmoitetun datan kanssa ei käy järkeen. HS tarjoaa
@@ -35,9 +35,12 @@ Osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnish
 `finnishCoronaData`-rajapinnan kanssa yhteensopivan dataobjektin havaistuista tartunnoista. kuolleista ja parantunteista.
 Esimerkki dataa [täällä](exampleObservationDataV2.json)
 
+Osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishVaccinationData) voit lukea tuoreimmat tiedot 
+Suomen rokotustilanteesta. HS:n toimitus päivittää tietoa käsin sitä mukaa kun THL sitä julkaisee.
+
 **Päivitys 28.12.2020**
 
-Ylläoleva v2-osoite on päivitetty poistamalla siitä `infectionSource` ja `infectionSourceCountry` -kentät. Muutos tehtiin, jotta rajapinnan
+Ylläoleva v2-osoite on päivitetty poistamalla siitä `infectionSource` ja `infectionSourceCountry` -kentät. Muutos tehtiin, jotta rajapinnan 
 vastaukset mahtuisivat AWS-lambdan rajoihin. Suosittelemme siirtymään käyttämään yllä olevaa osoitetta sairaaladataan ja alla olevaa THL:n
 tartuntadataan.
 
