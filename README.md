@@ -252,7 +252,7 @@ Our processed THL data can be read from (https://w3qa5ydb4l.execute-api.eu-west-
 Testing related data is offered for Finland level in a timeseries (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/thlTestData)
 and the latest information on health carea area level (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/hcdTestData).
 
-**Update 8.2.2021**
+**Update 8.1.2021**
 
 From (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishVaccinationData) you can read the latest info on Finnish vaccinations. 
 HS adds new data manually when THL has published new data.
