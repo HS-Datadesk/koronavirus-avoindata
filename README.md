@@ -35,9 +35,6 @@ Osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnish
 `finnishCoronaData`-rajapinnan kanssa yhteensopivan dataobjektin havaistuista tartunnoista. kuolleista ja parantunteista.
 Esimerkki dataa [täällä](exampleObservationDataV2.json)
 
-Osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishVaccinationData) voit lukea tuoreimmat tiedot 
-Suomen rokotustilanteesta. HS:n toimitus päivittää tietoa käsin sitä mukaa kun THL sitä julkaisee.
-
 **Päivitys 28.12.2020**
 
 Ylläoleva v2-osoite on päivitetty poistamalla siitä `infectionSource` ja `infectionSourceCountry` -kentät. Muutos tehtiin, jotta rajapinnan 
@@ -49,6 +46,11 @@ Esimerkkidata [täällä](exampleProcessedThlData.json).
 
 Testaukseen liittyvää dataa on tarjolla Suomen tasolla aikasarjana (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/thlTestData)
 ja viimeisin tieto sairaanhoitopiireittäin (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/hcdTestData).
+
+**Päivitys 8.1.2021**
+
+Osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishVaccinationData) voit lukea tuoreimmat tiedot 
+Suomen rokotustilanteesta. HS:n toimitus päivittää tietoa käsin sitä mukaa kun THL sitä julkaisee.
 
 ## Datan formaatti
 
@@ -249,6 +251,11 @@ Our processed THL data can be read from (https://w3qa5ydb4l.execute-api.eu-west-
 
 Testing related data is offered for Finland level in a timeseries (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/thlTestData)
 and the latest information on health carea area level (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/hcdTestData).
+
+**Update 8.2.2021**
+
+From (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishVaccinationData) you can read the latest info on Finnish vaccinations. 
+HS adds new data manually when THL has published new data.
 
 ## Data format
 
