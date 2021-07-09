@@ -33,7 +33,8 @@ tietoja sairaalahoidossa olevista. Tämä tieto on talletettu THL:n päivän rap
 
 Osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData/v2) voit lukea HS:n muokkaaman, aiemman
 `finnishCoronaData`-rajapinnan kanssa yhteensopivan dataobjektin havaistuista tartunnoista. kuolleista ja parantunteista.
-Esimerkki dataa [täällä](exampleObservationDataV2.json)
+Esimerkkidataa [täällä](exampleObservationDataV2.json). **HUOM:** kuolemat eivät enää päivity tähän rajapintaan, katso kohta päivityksestä
+9.7.2021 alta.
 
 **Päivitys 28.12.2020**
 
@@ -51,6 +52,21 @@ ja viimeisin tieto sairaanhoitopiireittäin (https://w3qa5ydb4l.execute-api.eu-w
 
 Osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishVaccinationData) voit lukea tuoreimmat tiedot 
 Suomen rokotustilanteesta. HS:n toimitus päivittää tietoa käsin sitä mukaa kun THL sitä julkaisee.
+
+**Päivitys 9.7.2021**
+
+THL muutti 23.6.2021 käytäntöjään sairaalahoidon ja kuolemien ilmoituksen suhteen. 23.6. asti sairaalahoidon ja kuolemien tiedot raportoitiin
+päivittäin (ja lopulta viikottain) THL:n verkkosivuilla HTML-taulukkona jonka raavimme omaan talteen. Tämä käytännön loputtua THL:n rajapinnat
+ovat olleet ainoa lähde sairaala- ja kuolematiedoille. Avointa rajapintaa on päivitetty seuraavasti:
+
+Sairaaladatan osoite (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaHospitalData) palautta dataa siten, että
+23.6.2021 palautetaan dataa kuten ennen, jonka jälkeen siihen yhdistetään THL:n rajapinnoista saatava data. Tämä aiheuttaa sen että
+datassa on pieni hyppäys 23.6. ja 24.6. välillä, sillä THL:n raportointikäytäntöjen mukaan tapahtumat sijoitetaan niiden tapahtumapäivälle (kun vanhassa
+mallissamme tapahtumat sijoitettiin raportointipäivälle). THL:n rajapinnoista ei saa enää kuin kuolemat Suomen tasolla, joten kuolemadata
+on 23.6.2021 alkaen erikoissairaanhoitopiirin tasolla `null`.
+
+Emme enää päivitä osoitetta https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData/v2 kuolemien osalta, sillä muutos vanhaan
+olisi liian suuri. Kuolematiedot siis jatkossa vain ylläolevasta osoitteesta. Avatkaa issueita jos tämä on ongelma ja niin voidaan pohtia uudestaan.
 
 ## Datan formaatti
 
@@ -239,7 +255,8 @@ From the endpoint (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/f
 the amount of people in hospital care. This data has been scraped of THL reports. Example data [here](exampleObservationData.json).
 
 For observations, we offer now (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData/v2). It's compatible with the old
-observations endpoint, but uses the THL data as a source. See example data [here](exampleObservationDataV2.json).
+observations endpoint, but uses the THL data as a source. See example data [here](exampleObservationDataV2.json). **HOX:** deaths won't update in
+this endpoint anymore. See info about the update on 9.7.2021 below.
 
 **Update 28.12.2020**
 
@@ -256,6 +273,21 @@ and the latest information on health carea area level (https://w3qa5ydb4l.execut
 
 From (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishVaccinationData) you can read the latest info on Finnish vaccinations. 
 HS adds new data manually when THL has published new data.
+
+**Update 9.7.2021**
+
+THL changed their reporting on 23.6.2021 regardin death and hospitalisation data. Until 23.6. the hospitalisation and death data was
+available in an HTML table (updated daily or weekly) on the THL website which we scraped. When this practice ended the only source for
+death and hospital data was the official THL API. Given this change the following changes in the interfaces have been made:
+
+The hospital data endpoint (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaHospitalData) returns data such
+that until 23.6.2021 you'll get the old data unchanged we used to serve, after which the new THL data is appended to the data. This causes
+as small discontinuity in the data between 23.6. and 24.6., since THL reports the incidents on the day it happened, whereas our method put
+the incidents on the day they were reported. THL only serves death data on Finland level now, so the death data on the lower area level
+after 23.6.2021 is `null`.
+
+The endpoint https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData/v2 won't be updated with death data anymore,
+since the update would be too big. You should use the above endpoint for death data. If this is a major issue, open issues and we might work something out.
 
 ## Data format
 
