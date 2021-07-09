@@ -33,7 +33,8 @@ tietoja sairaalahoidossa olevista. Tämä tieto on talletettu THL:n päivän rap
 
 Osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData/v2) voit lukea HS:n muokkaaman, aiemman
 `finnishCoronaData`-rajapinnan kanssa yhteensopivan dataobjektin havaistuista tartunnoista. kuolleista ja parantunteista.
-Esimerkki dataa [täällä](exampleObservationDataV2.json)
+Esimerkkidataa [täällä](exampleObservationDataV2.json). **HUOM:** kuolemat eivät enää päivity tähän rajapintaan, katso kohta päivityksestä
+9.7.2021 alta
 
 **Päivitys 28.12.2020**
 
@@ -51,6 +52,21 @@ ja viimeisin tieto sairaanhoitopiireittäin (https://w3qa5ydb4l.execute-api.eu-w
 
 Osoitteesta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishVaccinationData) voit lukea tuoreimmat tiedot 
 Suomen rokotustilanteesta. HS:n toimitus päivittää tietoa käsin sitä mukaa kun THL sitä julkaisee.
+
+**Päivitys 9.7.2021**
+
+THL muutti 23.6.2021 käytäntöjään sairaalahoidon ja kuolemien ilmoituksen suhteen. 23.6. asti sairaalahoidon ja kuolemien tiedot raportoitiin
+päivittäin (ja lopulta viikottain) THL:n verkkosivuilla HTML-taulukkona jonka raavimme omaan talteen. Tämä käytännön loputtua THL:n rajapinnat
+ovat olleet ainoa lähde sairaala- ja kuolematiedoille. Avointa rajapintaa on päivitetty seuraavasti:
+
+Sairaaladatan osoite (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaHospitalData) palautta dataa siten, että
+23.6.2021 palautetaan dataa kuten ennen, jonka jälkeen siihen yhdistetään THL:n rajapinnoista saatava data. Tämä aiheuttaa sen että
+datassa on pieni hyppäys 23.6. ja 24.6. välillä, sillä THL:n raportointikäytäntöjen mukaan tapahtumat sijoitetaan niiden tapahtumapäivälle (kun vanhassa
+mallissamme tapahtumat sijoitettiin raportointipäivälle). THL:n rajapinnoista ei saa enää kuin kuolemat Suomen tasolla, joten kuolemadata
+on 23.6.2021 alkaen erikoissairaanhoitopiirin tasolla `null`.
+
+Emme enää päivitä osoitetta (https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData/v2) kuolemien osalta, sillä muutos vanhaan
+olisi liian suuri. Kuolematiedot siis jatkossa vain ylläolevasta osoitteesta.
 
 ## Datan formaatti
 
